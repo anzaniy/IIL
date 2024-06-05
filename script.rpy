@@ -264,8 +264,24 @@ label intro:
     hide polar with dissolve
     show hubungan satu at truecenter
 
-    e "'Misal P adalah titik (x,y) yang mengacu pada sumbu X'OX dan Y'OY"
-    e "dan titik (r,theta) yang mengacu pada kutub O dan garis awal OX"
+    e "'Misal P adalah titik (x,y) yang mengacu pada sumbu X'OX"
+    
+    image hubungan dua  = im.Scale("images/Materi/hubungan_2.png", 1100, 500)
+    hide hubungan with dissolve
+    show hubungan dua at truecenter
+    
+    e "dan Y'OY"
+
+    image hubungan tiga  = im.Scale("images/Materi/hubungan_3.png", 1100, 500)
+    hide hubungan with dissolve
+    show hubungan dua at truecenter
+    
+    e "dan titik (r,θ) yang mengacu pada kutub O dan garis awal OX"
+
+    image hubungan empat  = im.Scale("images/Materi/hubungan_4.png", 1100, 500)
+    hide hubungan with dissolve
+    show hubungan empat at truecenter
+
     e "menurutmu dengan menggunakan definisi fungsi lingkaran, bagaimana cara mencari nilai x ?"
 
     image rumus satu  = im.Scale("images/Materi/rumus_1.png", 1100, 500)
@@ -276,7 +292,7 @@ label intro:
     d "Demikian juga y dapat menggunakan rumus r sin theta"
 
     hide rumus with dissolve
-    show hubungan satu at truecenter
+    show hubungan dua at truecenter
 
     e "maka dengan demikian, kita dapat menyimpulkan untuk mencari nikai tan theta dapat menggunakan rumus y/x"
 
@@ -322,6 +338,13 @@ label intro:
     e "Dan juga, Dalam beberapa kasus, mungkin perlu menggunakan keduanya secara bersamaan atau menggabungkan elemen-elemen dari masing-masing sistem koordinat untuk mendapatkan representasi yang paling informatif dan relevan"
     e "Jadi menurutku, so far, tidak permasalahan serius dalam judul penelitianku ini"
     e "Bagaimana dengan mu, kak ?"
+    
+    #Pembahasan Jarak, Perbandingan, dan Gradien
+
+    #Rumus Jarak
+    v "Sebelumnya kita pahami bagaimana cara mengetahui rumus untuk mendapatkan jarak"
+
+
     
     
     return
