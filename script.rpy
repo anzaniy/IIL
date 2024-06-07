@@ -10,6 +10,7 @@ image bg lecturer room = im.Scale("images/Background/room_1.jpg", 2400, 1200)
 image bg night city = im.Scale("images/Background/night_city_1.jpg", 2400, 1200)
 image bg library = im.Scale("images/Background/library.jpg", 2400, 1200)
 image bg cafe = im.Scale("images/Background/cafe.jpg", 2400, 1200)
+image bg lounge = im.Scale("images/Background/lounge.jpg", 2400, 1200)
 
 image erika base = im.Scale("images//Character/erika_2.png", 500, 1100)
 image aurellia base = im.Scale("images/Character/aurellia.png", 500, 1100)
@@ -58,8 +59,7 @@ label act_1:
     u "Kalau gitu bergegaslah setengah jam lagi akan dimulai kelasnya"
     d "Iya, iya, ini aku lagi siap-siap"
 
-    scene bg campus with dissolve
-
+    play music "Blithe.ogg"
     scene bg campus with dissolve
     d "Aduh bagaimana ya, sudah berapa kali aku mengirim proposal kepada 3 dosen berbeda dan semuanya ditolak apakah tidak ada cara lain?"
     u "Kamu juga asal bikin proposal gimana mau diterima jika kamu bikinnya asal-asalan"
@@ -145,6 +145,7 @@ menu:
         jump intro
     
 label intro:
+    play music "good.ogg"
     hide revina with dissolve
     show erika base with dissolve
     
@@ -343,8 +344,260 @@ label intro:
 
     #Rumus Jarak
     v "Sebelumnya kita pahami bagaimana cara mengetahui rumus untuk mendapatkan jarak"
+    image jarak satu  = im.Scale("images/Materi/jarak_1.png", 1100, 500)
+    # hide polar with dissolve
+    show jarak satu at truecenter
+    v "Misalkan A dan B adalah titik X1,Y1 dan X2,Y2"
+    v "r panjang AB dan θ sudut inklinasi dari AB ke OX"
+    
+    v "Maka dapat kita simpulkan"
+
+    image jarak dua  = im.Scale("images/Materi/jarak_2.png", 1100, 500)
+    hide jarak with dissolve
+    show jarak dua at truecenter
+
+    v "r cos θ = x2-x1"
+
+    image jarak tiga  = im.Scale("images/Materi/jarak_3.png", 1100, 500)
+    hide jarak with dissolve
+    show jarak tiga at truecenter
+
+    v "r sin θ = y2-y1"
+    v "Dengan kedua rumus yang tadi kita sebutkan, maka untuk mendapatkan nilai dari r kita tinggal memasukkan 2 variabel yang kita sebutkan tadi"
+
+    image jarak empat  = im.Scale("images/Materi/jarak_4.png", 1100, 500)
+    hide jarak with dissolve
+    show jarak empat at truecenter
+
+    v "Didapatlah rumus sebagai berikut"
+
+    image jarak lima  = im.Scale("images/Materi/jarak_5.png", 1100, 500)
+    hide jarak with dissolve
+    show jarak lima at truecenter
+
+    v "Dalam kasus tertentu, r dapat diperoleh dengan cara berikut"
+
+    image jarak enam  = im.Scale("images/Materi/jarak_6.png", 1100, 500)
+    hide jarak with dissolve
+    show jarak enam at truecenter
+
+    v "Misalkan MA, NB (Gambar 1.8) adalah ordinat dari A (x_1,y_1), B (x_2,y_2)"
+
+    image jarak tujuh  = im.Scale("images/Materi/jarak_7.png", 1100, 500)
+    hide jarak with dissolve
+    show jarak tujuh at truecenter
+
+    v "Dan misalkan AC sejajar OX, memotong NB di C"
+    
+    image jarak delapan  = im.Scale("images/Materi/jarak_8.png", 1100, 500)
+    hide jarak with dissolve
+    show jarak delapan at truecenter
+
+    v "Maka dapat disimpulkan untuk mencari nilai kuadrat dari jarak adalah dengan penjumlahan dari kuadrat AC dan kuadrat AB"
+    v "Kita dapat memperoleh nilai r hanya jika nilai NC = MA"
+
+    e "Selanjutnya kita masuk ke garis lurus"
+    e "Apa kau tahu apa itu garis lurus ?"
+    v "Garis yang berbentuk lurus?"
+    e "Gak salah sih"
+    e "Sekarang kita kan lebih fokus tentang persamaan garis lurusnya"
+    e "Persamaan garis lurus dapat kita tulis dengan bentuk Ax + By + C = 0"
+    e "Dengan A, B, C konstan menunjukkan persamaan garis"
+
+    image rumus dua  = im.Scale("images/Materi/rumus_2.png", 1100, 500)
+    hide jarak with dissolve
+    show rumus dua at truecenter
+
+    e "Jika B ≠ 0, kita tuliskan dengan bentuk berikut"
+    e "Persamaan tersebut menunjukkan gradien -A/B dan melalui titik (0,-C/B)"
+    e "Jika B=0, kita tuliskan x= -C/A"
+    e "Persamaan tersebut menunjukkan garis sejajar sumbu-y"
+    e "Oh iya, perlu diingat ya.."
+    e "Jika A=0, maka y=-C/B menunjukkan persamaan garis sejajar sumbu-x"
+    e "Jika C=0, maka y=-A/B x menunjukkan persamaan garis melalui titik pusat"
+    e "Jika A = C = 0, maka y = 0 menunjukkan persamaan sumbu-x"
+    e "Jika B = C = 0, maka x = 0 menunjukkan persamaan sumbu-y"
+
+    v "ngomong-ngomong, apa kau tahu tempat kedudukan suatu titik?"
+    v "Tempat kedudukan suatu titik adalah himpunan titik-titik yang anggotanya merupakan himpunan yang memiliki sifat yang sama"
+    v "Sebagai contoh"
+
+    image titik satu  = im.Scale("images/Materi/titik_1.png", 1100, 500)
+    hide rumus with dissolve
+    show titik satu at truecenter
+    
+    v "Jika P (x,y) adalah sembarang titik yang sama jauhnya dari A (1,4) dan B (3,2), maka didapatlah persamaan sebagai berikut"
+
+    image rumus tiga  = im.Scale("images/Materi/rumus_3.png", 1100, 500)
+    hide titik with dissolve
+    show rumus tiga at truecenter
+
+    v "Jika garis tersebut dijalankan, persamaan semula dapat menjadi 2x-2y=6"
+
+    e "Selanjutknya bagaimana jika ada garis lurus dengan gradien (m) melalui satu titik"
+
+    image gradien dua  = im.Scale("images/Materi/gradien_2.png", 1100, 500)
+    hide rumus with dissolve
+    show gradien dua at truecenter
+
+    e "Dari garis yang melalui A dan B dapat diketahui gradien garis tersebut dengan rumus y-y1/x-x1"
+    e "Gradien garis AB diketahui sama dengan m, sehingga y-y1 = m(x-x1)"
+
+    # image garis lurus satu  = im.Scale("images/Materi/lurus_1.png", 1100, 500)
+    # hide gradien with dissolve
+    # show garis lurus satu at truecenter
+
+    e "Jika tadi garis melalui satu titik, sekarang kita akan mencari bagaimana jika garis melalui dua titik"
+
+    image sumbu satu  = im.Scale("images/Materi/sumbu_1.png", 1100, 500)
+    hide gradien with dissolve
+    show sumbu satu at truecenter
+
+    e "Misalkan A, B adalah titik (x_1,y_1), (x_2,y_2) memotong sumbu-x dan sumbu-y, maka A (x_1,0), B (0,y_2)"
+    e "Maka ketika kita masukkan variabelnya akan menjadi seperti berikut"
+
+    hide erika base with dissolve
+    hide revina base with dissolve
+
+    
+    jump act_2
+
+label act_2 :
+    scene bg lounge with dissolve
+    play music "My Only Love.ogg"
+    show aurellia base with dissolve
+    #Skenario 1
+    #Dika bangun tidur siap2 mau keluar dan diluar udh ditunggu sama Aurellia
+
+    "Sesaat setelah ku keluar dari kosan, aku melihat seorang berdiri didepan pagar kosanku"
+    "Oh, Halo, Dika"
+    "Sudah berapa lama kita tidak bertemu"
+
+    "Dia adalah Aurellia, temanku dari SD, aku sempat terkejut kenapa dia ada"
+    a "Kenapa mukamu, seperti baru lihat hantu?"
+    a "Apa kau lupa pesanku semalam"
+    "Aku sempat terbingung dengan apa maksud dari perkaataan Aurel"
+    "Karena pesan yang dia sampaikan itu bertepatan setelah kami menyelesaikan permasalahan Erika tentang garis lurus"
+    "Yang menyebabkan aku sampai kelelahan dan hanya sempat membaca sekilas pesannya"
+    a "So, shall we go now?"
+
+    #Latar kompleks
+    a "Jadi, gimana kuliahmu"
+    #basa basi
+
+    a "Lingkaran adalah tempat kedudukan titik-titik yang memiliki jarak yang sama terhadap titik tertentu"
+
+    image lingkaran satu  = im.Scale("images/Materi/lingkaran_1.png", 1100, 500)
+    hide aurellia base with dissolve
+    show aurellia base at left
+    # hide gradien with dissolve
+    show lingkaran satu at truecenter
+
+    a "Misalkan P sembarang titik (x,y) pada lingkaran, maka"
+
+    image lingkaran dua  = im.Scale("images/Materi/lingkaran_2.png", 1100, 500)
+    hide lingkaran with dissolve
+    show lingkaran dua at truecenter
+
+    a "Persamaan ini berlaku untuk setiap titik pada lingkaran dan menjadi persamaan lingkaran dengan pusat O. Persamaan polar lingkaran memenuhi a = r."
+    a "Jika tadi persamaan lingkaran dengan pusat(0,0) selanjutnya kita membahas persamaan lingkaran dengan pusat (a,b)"
+
+    image lingkaran tiga  = im.Scale("images/Materi/lingkaran_3.png", 1100, 500)
+    hide lingkaran with dissolve
+    show lingkaran tiga at truecenter
+
+    a "Misalkan C adalah titik (a,b) yang merupakan titik pusat lingkaran dan misalkan P (x,y) titik pada lingkaran, maka"
+    
+    image lingkaran empat  = im.Scale("images/Materi/lingkaran_4.png", 1100, 500)
+    hide lingkaran with dissolve
+    show lingkaran empat at truecenter
+
+    a "Persamaan diatas dapat diubah menjadi x^2+y^2-2ax-2by+(a^2+b^2-r^2)=0 atau x^2+y^2+Ax+By+C=0"
+    a "yang disebut persamaan umum lingkaran. Dengan nilai A=-2a, B=-2b, C=a^2+b^2-r^2"
+
+    image lingkaran lima  = im.Scale("images/Materi/lingkaran_5.png", 1100, 500)
+    hide lingkaran with dissolve
+    show lingkaran lima at truecenter
+
+    a "Dengan demikian persamaan di atas menunjukkan titik pusat lingkaran (-1/2 A,-1/2 B) dan jari-jari √(1/4 A^2+1/4 B^2-C)"
+    a "Memperhatikan jari-jari tersebut, terdapat beberapa kemungkinan"
+    a "Jika 1/4 A^2+1/4 B^2-C>0, maka menyatakan lingkaran nyata"
+    a "Jika 1/4 A^2+1/4 B^2-C=0, maka menyatakan lingkaran dengan jari-jari nol"
+    a "Jika 1/4 A^2+1/4 B^2-C>0, maka menyatakan lingkaran imajiner"
+
+    hide lingkaran with dissolve
+
+    a "Selanjutnya bagaimana jika terdapat persamaan lingkaran melalui 3 titik"
+    a "Misalkan terdapat titik P (x_1,y_1), Q (x_2,y_2), dan R (x_3,y_3) tak segaris. Akan dibentuk persamaan lingkaran melalui ketiga titik tersebut, maka diperoleh"
+
+    image lingkaran enam  = im.Scale("images/Materi/lingkaran_6.png", 1100, 500)
+    # hide lingkaran with dissolve
+    show lingkaran enam at truecenter
+
+    a "Dari persamaan-persamaan tersebut diperoleh sistem persamaan linier 3 variabel. Melalui eliminasi dan subtistusi diperoleh nilai A, B, dan C. Selanjutnya substitusi nilai-nilai tersebut ke persamaan umum lingkaran sehingga diperoleh persamaan lingkaran melalui tiga titik tak segaris."
+    a "Cara lain yang dapat digunakan adalah menggunakan determinan"
+
+    image lingkaran tujuh  = im.Scale("images/Materi/lingkaran_7.png", 1100, 500)
+    hide lingkaran with dissolve
+    show lingkaran tujuh at truecenter
+
+    a "Misalkan terdapat titik P (x_1,y_1), Q (x_2,y_2), R (x_3,y_3), dan sembarang titik T (x,y) pada lingkaran sehingga diperoleh nilai sebagai berikut"
+
+    image lingkaran delapan  = im.Scale("images/Materi/lingkaran_8.png", 1100, 500)
+    hide lingkaran with dissolve
+    show lingkaran delapan at truecenter
+
+    a "Sistem persamaan tersebut akan memiliki penyelesaian jika determinan dari koefisien A, B, C, sebagai variabel dan konstantanya sama dengan nol"
+    a "Karena T (x,y) adalah titik sebarang pada lingkaran, maka setiap titik pada lingkaran akan memenuhi persamaan determinan tersebut"
+
+    hide lingkaran with dissolve
+    a "ngomong-ngomong, apakah kamu tahu tentang garis singgung dan gariskutub lingkaran?"
+    a "Garis singgung lingkaran adalah garis yang memotong atau bersinggungan dengan lingkaran hanya di sebuah titik. Selanjutnya titik tersebut disebut titik singgung"
+    a "Dalam persamaan Garis Singgung Lingkaran di titik di Titik (x_1,y_1)"
+    a "Jika P (x_1,y_1) dan Q (x_2,y_2).adalah dua titik pada lingkaran, persamaan garis PQ adalah y-y_1=(y_2-y_1)/(x_2-x_1 ) (x-x_1 )"
+    a "Tapi x_1^2+y_1^2=r^2=x_2^2+y_2^2 dan y_2^2-y_1^2=-(x_2^2+x_1^2 )"
+    a "Maka (y_2-y_1)/(x_2-x_1 )=-(x_2+x_1)/(y_2+y_1 )"
+    a "Persamaan garis PQ menjadi y-y_1=-(x_2+x_1)/(y_2+y_1) (x-x_1)"
+    a "Sekarang misalkan Q mendekati P, persamaan garis PQ maka menjadi"
+
+    image singgung satu  = im.Scale("images/Materi/singgung_1.png", 1100, 500)
+    # hide lingkaran with dissolve
+    show singgung satu at truecenter
+
+    a "Jika lingkaran tersebut memiliki titik pusat di (a,b) maka dengan cara yang sama dapat diperoleh persamaan garis singgungnya (x-a)(x_1-a)+(y-b)(y_1-b)=r^2"
+    hide lingkaran with dissolve
+    a "Selanjutnya ke persamaan Garis Singgung y=mx+c terhadap Lingkaran x^2+y^2=r^2"
+    a "Saat garis y=mx+c menyinggung lingkaran x^2+y^2=r^2 maka persamaannya menjadi x^2+〖(mx+c)〗^2=r^2(1+m^2 )x^2+2mcx+(c^2-r^2 )=0"
+
+    image singgung dua  = im.Scale("images/Materi/singgung_2.png", 1100, 500)
+    hide singgung with dissolve
+    show singgung dua at truecenter
+    a "Karena keduanya memiliki titik yang sama (titik potong), maka persamaan di atas memiliki nilai diskriminan sama dengan nol"
+    a "Sehingga persamaan garis singgungnya menjadi y=mx±r√(1+m^2 )."
+    a "Jika lingkaran tersebut memiliki titik pusat di (a,b) maka dengan cara yang sama dapat diperoleh persamaan garis singgungnya y-b=m(x-a)±r√(1+m^2 )."
+
+    hide singgung with dissolve
+
+    a "Sudut antara dua lingkaran adalah sudut yang diapit oleh garis-garis singgung pada lingkaran di titik potong kedua lingkaran tersebut"
+
+    image sudut satu  = im.Scale("images/Materi/sudut_1.png", 1100, 500)
+    # hide singgung with dissolve
+    show sudut satu at truecenter
+
+    a "Sudut α pada Gambar 2.4 menunjukkan sudut antara dua lingkaran dengan titik pusat P_1 dan P_2."
+    a "Langkah-langkah untuk menentukan besar α sebagai berikut:"
+    a "Tentukan titik potong antara dua lingkaran dengan pusat P_1 dan P_2."
+    a "Tentukan persamaan garis singgung pada salah satu titik potongnya"
+    a "Tentukan sudut apit kedua garis singgung menggunakan tan⁡α=(m_1-m_2)/(1+m_1.m_2 )"
+
+    a "Oke biar langsung paham kita masuk ke latihan saja yak"
+
+
 
 
     
-    
+
+
+
+
     return
