@@ -130,7 +130,7 @@ style namebox is default
 style namebox_label is say_label
 
 
-style window:
+style window:   
     xalign 0.5
     xfill True
     yalign gui.textbox_yalign

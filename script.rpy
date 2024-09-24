@@ -9,6 +9,9 @@ image bg night city = im.Scale("images/Background/night.jpg", 2400, 1200)
 image bg library = im.Scale("images/Background/library.jpg", 2400, 1200)
 image bg cafe = im.Scale("images/Background/cafe_1.png", 2400, 1200)
 image bg lounge = im.Scale("images/Background/lounge.jpg", 2400, 1200)
+image bg dark = im.Scale("images/darkness.webp", 2400, 1200)
+
+image illu lia = im.Scale("images/Illustration/illu_1.png", 1950, 1100)
 
 #Revina
 image revina base = im.Scale("images/Character/revina_base.png", 1100, 1100)
@@ -242,11 +245,32 @@ label intro:
     d "kalau begitu, boleh aku ikut menemanimu, mungkin aku bisa sedikit membantu"
     show erika sad
     e "Apa kamu yakin bisa membantuku belajar?"
+    menu:
+        "Tentu saja,mari kita belajar bersama":
+            jump eri_1
+    
+    label eri_1:
+    e "Baiklah kalau begitu, tapi sebelum itu.."
+    e "Apa kita bisa kembali kekampus?"
+    e "Sepertinya buku pelajaranku tertinggal dikelas tadi"
+    menu:
+        "Bukankah malam-malam begini kelas dikunci? bagaimana carak ita masuk?":
+            jump eri_2
+    
+    label eri_2:
+    e "Iya sih, tapi aku dengar-dengar kelas umum sepertinya pintunya lagi rusak, mungkin kita bisa menyelinap masuk"
+    menu:
+        "Apa tidak bahaya kalau ketahuan satpam?":
+            jump eri_3
+    
+    label eri_3:
     show erika happy
-    e "Pede sekali kamu hahaha"
-    show erika base
-    e "Yaudah, yuk"
+    e "Tenang saja, kalo ketahuan kita lari"
+    e "Ayo kita bergegas"
+    hide erika
+    jump hidden_object_example
 
+    label library:
     scene bg library with dissolve
     show erika base with dissolve
     #sfx naruh buku
@@ -742,20 +766,35 @@ label act_2 :
     label aurelia:
     a "Sudah kuduga, pasti kamu langsung tidur semalam"
     a "Aku ingin memintamu menemaniku menonton pertandingan basket di gor siang ini"
-    a "Karena sekarang aku marah, kamu gaboleh nolak, sekarang cepat siap-siap, aku tunggu di ruang tamu"
+    a "Astaga ruangan apa ini, apa kamu rajin membersihkan rumah?"
+    a "Kenapa bisa banyak barang berantakan disini"
+    a "Karena sekarang aku marah, kamu gaboleh nolak, ayo sini bersih-bersih"
     "Mendengar perkataan Lia, aku tidak bisa membantah perkataan dia"
-    "Aku segera siap-siap untuk pergi bersama Lia"
+    hide aurellia
+    jump bersih_bersih
 
     #Skenario 1
     #Dika bangun tidur siap2 mau keluar dan diluar udh ditunggu sama Aurellia
 
     #Latar kompleks
+    label mtk:
     show aurellia base satu
     a "Jadi, gimana kuliahmu"
     d "Pusing"
     a "Sama, aku juga, apalagi di semester akhir ini"
     a "Makanya aku ngajak kamu buat refreshing sedikit"
     a "Sayang sekali ya kita beda fakultas, padahal kita dlu SMA sama-sama suka matematika"
+    a "Mempung waktu masih panjang, apa kau mau belajar matematika denganku? aku saat ini sedang memperdalam materi lingkaran buat skripsiku"
+    menu:
+        "Tidak Terima kasih":
+            jump ayo
+    label ayo:
+    a "Ayolaah sebentar saja, sudah lama kita tidak belajar bareng"
+    menu:
+        "Sepertinya aku tidak bisa menolak ini":
+            jump bljr 
+    label bljr:
+    a "Terima kasihh"
     a "Ngomong-ngomong, apa kau tahu kenapa bola itu berbentuk lingkaran?"
     a "Apakah agar ia bisa dimainkan? atau karena bentuknya simple dan mudah dibuat?"
     a "Aku mikirnya karena dia bisa bebas untuk dimainkan, ada yang main sambil ditendang, ada juga yang dilempar"
@@ -831,59 +870,62 @@ label act_2 :
 
     hide lingkaran with dissolve
 
-    a "ngomong-ngomong, apakah kamu tahu tentang garis singgung dan gariskutub lingkaran?"
+    a "ngomong-ngomong, apakah kamu tahu tentang garis singgung dan garis kutub lingkaran?"
     a "Garis singgung lingkaran adalah garis yang memotong atau bersinggungan dengan lingkaran hanya di sebuah titik. Selanjutnya titik tersebut disebut titik singgung"
     a "Dalam persamaan Garis Singgung Lingkaran di titik di Titik (x₁,y₁)"
     a "Jika P (x₁,y₁) dan Q (x₂,y₂).adalah dua titik pada lingkaran, persamaan garis PQ adalah y-y₁=(y₂-y₁)/(x₂-x₁ ) (x-x₁ )" 
     a "Tapi x₁²+y₁² = r² = x₂² + y₂² dan y₂²-y₁² = -(x₂²+x₁²)"
     a "Maka (y₂-y₁)/(x₂-x₁) = -(x₂+x₁)/(y₂+y₁)"
     a "Persamaan garis PQ menjadi y-y₁=-(x₂+x₁)/(y₂+y₁) (x-x₁)"
-    a "Sekarang misalkan Q mendekati P, persamaan garis PQ maka menjadi seperti berikut"
+    # a "Sekarang misalkan Q mendekati P, persamaan garis PQ maka menjadi seperti berikut"
 
     image singgung satu  = im.Scale("images/Materi/singgung_1.png", 1100, 500)
     # hide lingkaran with dissolve
-    show singgung satu at truecenter
+    # show singgung satu at truecenter
 
-    a "Jika lingkaran tersebut memiliki titik pusat di (a,b) maka dengan cara yang sama dapat diperoleh persamaan garis singgungnya (x-a)(x₁-a) + (y-b)(y₁-b) = r²"
-    hide lingkaran with dissolve
-    a "Selanjutnya ke persamaan Garis Singgung y = mx+c terhadap Lingkaran x²+y² = r²"
-    a "Saat garis y = mx+c menyinggung lingkaran x²+y²=r² maka persamaannya menjadi x + (mx+c)² = r²(1+m²)x² + 2mcx + (c²-r²)=0"
+    # a "Jika lingkaran tersebut memiliki titik pusat di (a,b) maka dengan cara yang sama dapat diperoleh persamaan garis singgungnya (x-a)(x₁-a) + (y-b)(y₁-b) = r²"
+    # hide lingkaran with dissolve
+    # a "Selanjutnya ke persamaan Garis Singgung y = mx+c terhadap Lingkaran x²+y² = r²"
+    # a "Saat garis y = mx+c menyinggung lingkaran x²+y²=r² maka persamaannya menjadi x + (mx+c)² = r²(1+m²)x² + 2mcx + (c²-r²)=0"
 
-    image singgung dua  = im.Scale("images/Materi/singgung_2.png", 1100, 500)
-    hide singgung with dissolve
-    show singgung dua at truecenter
-
-    a "Karena keduanya memiliki titik yang sama (titik potong), maka persamaan di atas memiliki nilai diskriminan sama dengan nol"
-    a "Sehingga persamaan garis singgungnya menjadi y = mx ± r√(1+m²)."
-    a "Jika lingkaran tersebut memiliki titik pusat di (a,b) maka dengan cara yang sama dapat diperoleh persamaan garis singgungnya y-b = m(x-a) ± r√(1+m²)."
-
-    hide singgung with dissolve
-
-    a "Sudut antara dua lingkaran adalah sudut yang diapit oleh garis-garis singgung pada lingkaran di titik potong kedua lingkaran tersebut"
-
-    image sudut satu  = im.Scale("images/Materi/sudut_1.png", 1100, 500)
+    # image singgung dua  = im.Scale("images/Materi/singgung_2.png", 1100, 500)
     # hide singgung with dissolve
-    show sudut satu at truecenter
+    # show singgung dua at truecenter
 
-    a "Sudut α pada Gambar menunjukkan sudut antara dua lingkaran dengan titik pusat P₁ dan P₂."
-    a "Langkah-langkah untuk menentukan besar α sebagai berikut:"
-    a "Tentukan titik potong antara dua lingkaran dengan pusat P₁ dan P₂."
-    a "Tentukan persamaan garis singgung pada salah satu titik potongnya"
-    a "Tentukan sudut apit kedua garis singgung menggunakan tan ⁡α = (m₁-m₂)/(1 + m₁.m₂ )"
+    # a "Karena keduanya memiliki titik yang sama (titik potong), maka persamaan di atas memiliki nilai diskriminan sama dengan nol"
+    # a "Sehingga persamaan garis singgungnya menjadi y = mx ± r√(1+m²)."
+    # a "Jika lingkaran tersebut memiliki titik pusat di (a,b) maka dengan cara yang sama dapat diperoleh persamaan garis singgungnya y-b = m(x-a) ± r√(1+m²)."
 
-    a "Oke biar langsung paham kita masuk ke latihan saja yak"
-    a "Tentukan sudut antara x²+y²-3y-19=0 dan x²+y²-6x-16=0"
-    a "Penyelesaiannya jadi titik potong dari kedua lingkaran tersebut adalah (3,5) dan (-1,-3)."
-    a "Misalkan titik potong yang digunakan adalah (3,5), maka garis singgung dari L1 adalah 6x+7y-53=0 dan garis singgung L2 adalah y = 5"
-    a "Dari garis singgung tersebut diperoleh m₁=-6/7 dan m₂=0"
+    # hide singgung with dissolve
 
-    image sudut dua  = im.Scale("images/Soal/sudut_2.png", 1100, 500)
-    hide sudut with dissolve
-    show sudut dua at truecenter
+    # a "Sudut antara dua lingkaran adalah sudut yang diapit oleh garis-garis singgung pada lingkaran di titik potong kedua lingkaran tersebut"
 
-    a "Karena sudah diketahui beberapa nilai dan variabel, maka kita cukup masukkan saja dirumus, dan sudut yangter bentuk adalah seperti gambar tertera"
-    hide sudut with dissolve
+    # image sudut satu  = im.Scale("images/Materi/sudut_1.png", 1100, 500)
+    # # hide singgung with dissolve
+    # show sudut satu at truecenter
+
+    # a "Sudut α pada Gambar menunjukkan sudut antara dua lingkaran dengan titik pusat P₁ dan P₂."
+    # a "Langkah-langkah untuk menentukan besar α sebagai berikut:"
+    # a "Tentukan titik potong antara dua lingkaran dengan pusat P₁ dan P₂."
+    # a "Tentukan persamaan garis singgung pada salah satu titik potongnya"
+    # a "Tentukan sudut apit kedua garis singgung menggunakan tan ⁡α = (m₁-m₂)/(1 + m₁.m₂ )"
+
+    # a "Oke biar langsung paham kita masuk ke latihan saja yak"
+    # a "Tentukan sudut antara x²+y²-3y-19=0 dan x²+y²-6x-16=0"
+    # a "Penyelesaiannya jadi titik potong dari kedua lingkaran tersebut adalah (3,5) dan (-1,-3)."
+    # a "Misalkan titik potong yang digunakan adalah (3,5), maka garis singgung dari L1 adalah 6x+7y-53=0 dan garis singgung L2 adalah y = 5"
+    # a "Dari garis singgung tersebut diperoleh m₁=-6/7 dan m₂=0"
+
+    # image sudut dua  = im.Scale("images/Soal/sudut_2.png", 1100, 500)
+    # hide sudut with dissolve
+    # show sudut dua at truecenter
+
+    # a "Karena sudah diketahui beberapa nilai dan variabel, maka kita cukup masukkan saja dirumus, dan sudut yangter bentuk adalah seperti gambar tertera"
+    # hide sudut with dissolve
     a "Sepertinya sudah cukup untuk pagi ini"
+    a "Dilihat dari wajamu saja udah keliatan banget pusing"
+    a "Kalau begitu, siap-siap dari sekarang kita mau berangkat" 
+    scene bg dark
     menu:
         "Lagian, ngapain bahas pelajaran di pagi-pagi libur gini":
             jump ending
@@ -891,6 +933,23 @@ label act_2 :
     label ending:
         a "Hehe, maaf"
         a "Sekalian buang waktu aja, sudah saatnya kita berangkat, ayo berangkat"
+        a "Ngomong ngomong menurutmu bagaimana?"
+        menu:
+            "Bagaimana apanya?":
+                jump tampilan
+        label tampilan:
+        scene illu lia with dissolve
+        a "Bagaimana penampilanku? cocok ?"
+        menu:
+            "Cocok":
+                jump obrol
+            "Bagus, hari ini kamu tampil cantik":
+                jump obrol
+        label obrol:
+            a "Benarkah"
+            a "Aku harap kamu lebih terkejut melihatku berpenampilan seperti ini"
+            a "Kamu tahukan dari dulu aku selalu berpenampilan tomboy"
+            a "Anywayy, yuk langsung berangkat"
         hide aurellia base with dissolve
         "Setelah mengalami pagi yang memusingkan akhirnya kami pergi untuk menonton pertandingan basket bersama"
         "Aku tidak tahu pelajaran apalagi nanti yang akan dibahas dimasa mendatang, tapi yang jelas akhirnya aku bisa bersantai dengan leluasa.."
