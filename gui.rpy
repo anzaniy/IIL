@@ -25,48 +25,56 @@ define config.check_conflicting_properties = True
 ## The colors of text in the interface.
 
 ## An accent color used throughout the interface to label and highlight text.
-define gui.accent_color = '#0099cc'
+define gui.accent_color = '#000060'
 
 ## The color used for a text button when it is neither selected nor hovered.
-define gui.idle_color = '#888888'
+define gui.idle_color = '#000060'
 
 ## The small color is used for small text, which needs to be brighter/darker to
 ## achieve the same effect.
-define gui.idle_small_color = '#aaaaaa'
+define gui.idle_small_color = '#404040'
 
 ## The color that is used for buttons and bars that are hovered.
-define gui.hover_color = '#66c1e0'
+define gui.hover_color = '#3284d6'
 
 ## The color used for a text button when it is selected but not focused. A
 ## button is selected if it is the current screen or preference value.
-define gui.selected_color = '#ffffff'
+define gui.selected_color = '#555555'
 
 ## The color used for a text button when it cannot be selected.
 define gui.insensitive_color = '#8888887f'
 
 ## Colors used for the portions of bars that are not filled in. These are not
 ## used directly, but are used when re-generating bar image files.
-define gui.muted_color = '#003d51'
-define gui.hover_muted_color = '#005b7a'
+define gui.muted_color = '#6080d0'
+define gui.hover_muted_color = '#8080f0'
 
 ## The colors used for dialogue and menu choice text.
-define gui.text_color = '#ffffff'
-define gui.interface_text_color = '#ffffff'
+define gui.text_color = '#402000'
+define gui.interface_text_color = '#404040'
 
 
 ## Fonts and Font Sizes ########################################################
 
 ## The font used for in-game text.
 define gui.text_font = "DejaVuSans.ttf"
+# define gui.text_font = "ArchitectsDaughter.ttf"
 
 ## The font used for character names.
-define gui.name_text_font = "DejaVuSans.ttf"
+define gui.name_text_font = "ArchitectsDaughter.ttf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "DejaVuSans.ttf"
+define gui.interface_text_font = "ArchitectsDaughter.ttf"
+
+define gui.system_font = "DejaVuSans.ttf"
+define gui.glyph_font = "DejaVuSans.ttf"
+define gui.interface_text_size = 36
+define gui.label_text_size = 45
+define gui.notify_text_size = 24
+define gui.title_text_size = 75
 
 ## The size of normal dialogue text.
-define gui.text_size = 33
+define gui.text_size = 25
 
 ## The size of character names.
 define gui.name_text_size = 45
@@ -107,7 +115,7 @@ define gui.textbox_yalign = 1.0
 ## The placement of the speaking character's name, relative to the textbox.
 ## These can be a whole number of pixels from the left or top, or 0.5 to center.
 define gui.name_xpos = 360
-define gui.name_ypos = 0
+define gui.name_ypos = -22
 
 ## The horizontal alignment of the character's name. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
@@ -115,16 +123,16 @@ define gui.name_xalign = 0.0
 
 ## The width, height, and borders of the box containing the character's name, or
 ## None to automatically size it.
-define gui.namebox_width = None
+define gui.namebox_width = 300
 define gui.namebox_height = None
 
 ## The borders of the box containing the character's name, in left, top, right,
 ## bottom order.
-define gui.namebox_borders = Borders(5, 5, 5, 5)
+define gui.namebox_borders = Borders(15, 7, 15, 7)
 
 ## If True, the background of the namebox will be tiled, if False, the
 ## background of the namebox will be scaled.
-define gui.namebox_tile = False
+define gui.namebox_tile = True
 
 
 ## The placement of dialogue relative to the textbox. These can be a whole
@@ -148,14 +156,14 @@ define gui.dialogue_text_xalign = 0.0
 
 ## The width and height of a button, in pixels. If None, Ren'Py computes a size.
 define gui.button_width = None
-define gui.button_height = None
+define gui.button_height = 64
 
 ## The borders on each side of the button, in left, top, right, bottom order.
-define gui.button_borders = Borders(6, 6, 6, 6)
+define gui.button_borders = Borders(10, 10, 10, 10)
 
 ## If True, the background image will be tiled. If False, the background image
 ## will be linearly scaled.
-define gui.button_tile = False
+define gui.button_tile = True
 
 ## The font used by the button.
 define gui.button_text_font = gui.interface_text_font
@@ -166,11 +174,12 @@ define gui.button_text_size = gui.interface_text_size
 ## The color of button text in various states.
 define gui.button_text_idle_color = gui.idle_color
 define gui.button_text_hover_color = gui.hover_color
-define gui.button_text_selected_color = gui.selected_color
+define gui.button_text_selected_color = gui.accent_color
 define gui.button_text_insensitive_color = gui.insensitive_color
 
 ## The horizontal alignment of the button text. (0.0 is left, 0.5 is center, 1.0
 ## is right).
+
 define gui.button_text_xalign = 0.0
 
 
@@ -180,9 +189,9 @@ define gui.button_text_xalign = 0.0
 ##
 ## These customizations are used by the default interface:
 
-define gui.radio_button_borders = Borders(27, 6, 6, 6)
+define gui.radio_button_borders = Borders(40, 10, 10, 10)
 
-define gui.check_button_borders = Borders(27, 6, 6, 6)
+define gui.check_button_borders = Borders(40, 10, 10, 10)
 
 define gui.confirm_button_text_xalign = 0.5
 
@@ -197,7 +206,7 @@ define gui.quick_button_text_selected_color = gui.accent_color
 ## For example, you can uncomment the following line to set the width of a
 ## navigation button.
 
-# define gui.navigation_button_width = 250
+define gui.navigation_button_width = 290
 
 
 ## Choice Buttons ##############################################################
@@ -212,7 +221,7 @@ define gui.choice_button_text_font = gui.text_font
 define gui.choice_button_text_size = gui.text_size
 define gui.choice_button_text_xalign = 0.5
 define gui.choice_button_text_idle_color = '#888888'
-define gui.choice_button_text_hover_color = "#ffffff"
+define gui.choice_button_text_hover_color = "#0066cc"
 define gui.choice_button_text_insensitive_color = '#8888887f'
 
 
@@ -284,7 +293,7 @@ define gui.main_menu_text_xalign = 1.0
 ## components when an overlay or window is not present.
 
 ## Generic frames.
-define gui.frame_borders = Borders(6, 6, 6, 6)
+define gui.frame_borders = Borders(15, 15, 15, 15)
 
 ## The frame that is used as part of the confirm screen.
 define gui.confirm_frame_borders = Borders(60, 60, 60, 60)
@@ -296,7 +305,7 @@ define gui.skip_frame_borders = Borders(24, 8, 75, 8)
 define gui.notify_frame_borders = Borders(24, 8, 60, 8)
 
 ## Should frame backgrounds be tiled?
-define gui.frame_tile = False
+define gui.frame_tile = True
 
 
 ## Bars, Scrollbars, and Sliders ###############################################
@@ -308,24 +317,24 @@ define gui.frame_tile = False
 
 ## The height of horizontal bars, scrollbars, and sliders. The width of vertical
 ## bars, scrollbars, and sliders.
-define gui.bar_size = 38
-define gui.scrollbar_size = 18
-define gui.slider_size = 38
+define gui.bar_size = 64
+define gui.scrollbar_size = 24
+define gui.slider_size = 64
 
 ## True if bar images should be tiled. False if they should be linearly scaled.
 define gui.bar_tile = False
-define gui.scrollbar_tile = False
-define gui.slider_tile = False
+define gui.scrollbar_tile = True
+define gui.slider_tile = True
 
 ## Horizontal borders.
-define gui.bar_borders = Borders(6, 6, 6, 6)
-define gui.scrollbar_borders = Borders(6, 6, 6, 6)
+define gui.bar_borders = Borders(10, 10, 10, 10)
+define gui.scrollbar_borders = Borders(10, 6, 10, 6)
 define gui.slider_borders = Borders(6, 6, 6, 6)
 
 ## Vertical borders.
-define gui.vbar_borders = Borders(6, 6, 6, 6)
+define gui.vbar_borders = Borders(10, 10, 10, 10)
 define gui.vscrollbar_borders = Borders(6, 6, 6, 6)
-define gui.vslider_borders = Borders(6, 6, 6, 6)
+define gui.vslider_borders = Borders(6, 10, 6, 10)
 
 ## What to do with unscrollable scrollbars in the gui. "hide" hides them, while
 ## None shows them.
@@ -342,19 +351,20 @@ define config.history_length = 250
 ## The height of a history screen entry, or None to make the height variable at
 ## the cost of performance.
 define gui.history_height = 210
+define gui.history_spacing = 0
 
 ## The position, width, and alignment of the label giving the name of the
 ## speaking character.
-define gui.history_name_xpos = 233
+define gui.history_name_xpos = 0.5
 define gui.history_name_ypos = 0
-define gui.history_name_width = 233
-define gui.history_name_xalign = 1.0
+define gui.history_name_width = 225
+define gui.history_name_xalign = 0.5
 
 ## The position, width, and alignment of the dialogue text.
-define gui.history_text_xpos = 255
-define gui.history_text_ypos = 3
+define gui.history_text_xpos = 0.5
+define gui.history_text_ypos = 60
 define gui.history_text_width = 1110
-define gui.history_text_xalign = 0.0
+define gui.history_text_xalign = 0.5
 
 
 ## NVL-Mode ####################################################################
@@ -429,7 +439,7 @@ init python:
     def small():
 
         ## Font sizes.
-        gui.text_size = 45
+        gui.text_size = 30
         gui.name_text_size = 54
         gui.notify_text_size = 38
         gui.interface_text_size = 45
@@ -437,9 +447,9 @@ init python:
         gui.label_text_size = 51
 
         ## Adjust the location of the textbox.
-        gui.textbox_height = 360
-        gui.name_xpos = 120
-        gui.dialogue_xpos = 135
+        gui.textbox_height = 278
+        gui.name_xpos = 360
+        gui.dialogue_xpos = 360
         gui.dialogue_width = 1650
 
         ## Change the size and spacing of various things.
