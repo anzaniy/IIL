@@ -1,3 +1,4 @@
+#Intro + penjelasan bareng Doni, cabang opsional
 label chapter_1:
     stop music
     d "H-Halo..?"

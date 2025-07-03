@@ -1,3 +1,5 @@
+#Bisa dibikin cabang Revina, atau ditambah cabang Erika satu lagi juga bisa
+#Chapter 4.1 dan 4.2 dan 5.1 dan 5.2
 label chapter_5:
     "Chapter 5"
     scene lounge with dissolve

@@ -1,3 +1,5 @@
+#spesial chapter with erika, bisa ditambahin cutscene bonus 1 or 2 di akhir
+#bikin cabang dengan waktu yang sama dengan Revina
 label chapter_4:
     "Chapter 4"
     scene bg night city

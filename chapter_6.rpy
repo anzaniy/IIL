@@ -1,3 +1,4 @@
+#chapter bareng sekaligus end dari first half(?)
 label chapter_6:
     "Chapter 6"
     scene bg night city
@@ -58,4 +59,5 @@ label chapter_6:
     e "Semoga kita bisa jalan terus bersama sampai lulus"
     e "Terima kasih teman-teman"
     hide bg night city with dissolve
+    #Tambah CG bertiga ketawa bareng tp susah sih
     "Chapter Selesai"
