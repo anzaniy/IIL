@@ -1,3 +1,4 @@
+#Diskusi 2/ Revina dan Erika, bisa ditambahin opsional disini
 label chapter_3:
 "Chapter 3"
 "Sesaat setelah pertemuan singkat itu, kami bertiga pergi menuju taman didepan jurusan"

@@ -1,3 +1,4 @@
+#Ketemu pak adib, tapi cuman penjelasan simple, no opsional(?)
 label chapter_2:
     scene bg lecturer room with dissolve
     "Setelah kegiatan perkuliahan, aku langsung berjalan menuju ruangan Pak Adib"
