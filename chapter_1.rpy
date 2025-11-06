@@ -18,7 +18,7 @@ label chapter_1:
     menu:
         "Geometri itu cabang matematika yang ngulik bentuk, ukuran, dan posisi benda di ruang":
             jump benar_1
-        
+
         "Geometri itu cabang matematika yang fokusnya cuma hitung-hitungan angka tanpa bentuk visual":
             jump salah_1
         "Geometri adalah ilmu yang khusus mempelajari bilangan prima dan faktorisasi":
