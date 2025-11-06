@@ -46,6 +46,7 @@ label chapter_1_1:
     show erika base with dissolve
     show erika base at shake
     "*Takkkk*"
+    
     u "Aduhh"
     "Sesaat setelah menutup telefon dengan tergesa, aku menabrak seorang perempuan asing"
     "Kertasnya kulihat berhamburan kemana-mana"

@@ -27,16 +27,16 @@ image revina envy = im.Scale("images/Character/revina_envy.png", 1100, 1100)
 image revina sad = im.Scale("images/Character/revina_sad.png", 1100, 1100)
 
 # #Erika Versi Awal
-# image erika base = im.Scale("images//Character/erika_base.png", 1100, 1100)
-# image erika happy = im.Scale("images//Character/erika_happy.png", 1100, 1100)
-# image erika envy = im.Scale("images//Character/erika_envy.png", 1100, 1100)
-# image erika sad = im.Scale("images//Character/erika_sad.png", 1100, 1100)
+image erika base = im.Scale("images//Character/erika_base.png", 1100, 1100)
+image erika happy = im.Scale("images//Character/erika_happy.png", 1100, 1100)
+image erika envy = im.Scale("images//Character/erika_envy.png", 1100, 1100)
+image erika sad = im.Scale("images//Character/erika_sad.png", 1100, 1100)
 
-#Erika Versi Awal
-image erika base = im.Scale("images//Character/Erika/erika_base.png", 1400, 1400)
-image erika happy = im.Scale("images//Character/Erika/erika_happy.png", 1100, 1100)
-image erika envy = im.Scale("images//Character/Erika/erika_envy.png", 1100, 1100)
-image erika sad = im.Scale("images//Character/Erika/erika_sad.png", 1100, 1100)
+# #Erika Versi Awal
+# image erika base = im.Scale("images//Character/Erika/erika_base.png", 1400, 1400)
+# image erika happy = im.Scale("images//Character/Erika/erika_happy.png", 1100, 1100)
+# image erika envy = im.Scale("images//Character/Erika/erika_envy.png", 1100, 1100)
+# image erika sad = im.Scale("images//Character/Erika/erika_sad.png", 1100, 1100)
 
 #Aurellia
 # image aurellia base = im.Scale("images/Character/aurellia.png", 500, 1100)
