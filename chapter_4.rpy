@@ -63,8 +63,75 @@ label chapter_4_1:
     show erika sad
     e "Aduh, maaf ya aku kebanyakan ngoceh dijalan"
     e "Pasti gedek juga dengerin aku ngomongin garis setelah kita pusing dengerin materi garis yang lain"
-    show erika base
-    e "Ah, kosan aku belok sini"
+    e "....."
+    e "Anyway...abis ini kamu mau kemana ?"
+    menu:
+        "Aku sudah lelah hari ini, mau pulang dulu":
+            jump pulang
+        "Aku mau sedikit jalan-jalan sebentar di sekitar taman kota":
+            jump jalan_1
+    label jalan_1:
+        d "Kamu mau ikut?"
+        e "Eh, anu, boleh-boleh saja" #erika masang muka malu
+        #ganti bg taman kota atau pinggiran kota
+        e "Ngomong-ngomong, apa kamu sering ngelakuin ini setiap malam?"
+        menu:
+            "Iya, lumayan sering":
+                jump jalan_2
+            "Enggak, cuman lagi pengen aja malam ini":
+                jump jalan_2
+    
+    label jalan_2:
+        e "Oalah"
+        e "Dulu aku juga sering jalan-jalan kesini setiap malam"
+        e "Tapi sekarang udah mulai jarang si"
+        menu:
+            "Kenapa kok mulai jarang?":
+                jump jalan_3
+            "Oh gitu":
+                jump ngambek_1
+        
+        label ngambek_1:
+            #Muka ngambek
+            e "Kamu kok gitu amat, gak pedulian banget"
+            d "Eh, maaf-maaf"
+            e "Yaudah deh kalo kamu gitu, aku pulang aja"
+            e "BYE"
+            jump chapter_5
+    label jalan_3:
+        e "Dulu tiap kali ada masalah aku itu kaburan anaknya"
+        e "Dan ya, aku selalu kabur kesini dulu"
+        e "Entah itu untuk jernihin pikiran"
+        "aku menatap Erika dengan muka prihatin"
+        e "Gausah ngebayangin segitunya juga lah"
+        e "Gak seburuk yang kamu pikirin kok"
+        e "apalagi anak kecil, kan masalah kecil aja suka dibesar-besarin"
+        menu:
+            "Beneran bukan masalah besar?":
+                jump jalan_4
+            "Iyadeh aku percaya":
+                jump jalan_4
+    
+    label jalan_4:
+        #CG Erika lihat pemandangan
+        "Erika menepi di pagar taman sambil menatap pemandangan kota dari atas bukit"
+        e "Lagipula, gak perlu banyak alasan juga udah cukup kok buat bisa nikmatin pemandangan ini"
+        e "Meskipun hidup ini pahit"
+        e "Kita mau gamau harus ngejalanin ini dengan lapang dada"
+        e "Itu yang dikatakan oleh banyak orang"
+        e "Tapi, gimana mau lapang dada"
+        e "Kalau kita sendiri gak punya dada untuk dilapangkan"
+        e "Apa aku benar, Dika?"
+        d "......."
+        #ganti normal
+        e "Anyway, yuk kita pulang"
+        e "Udah mau tengah malem"
+    
+    label pulang:
+        e "Oh, gitu.."
+        e "Yaudah, hati-hati ya"
+            jump chapter_5
+            
     show erika happy
     e "makasih ya udh nemenin. sampai jumpa besok, Dika"
     menu:

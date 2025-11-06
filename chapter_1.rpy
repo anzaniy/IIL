@@ -49,8 +49,26 @@ label chapter_1_1:
     u "Aduhh"
     "Sesaat setelah menutup telefon dengan tergesa, aku menabrak seorang perempuan asing"
     "Kertasnya kulihat berhamburan kemana-mana"
-    d "Maaf aku gak sengaja, salahku kertasmu jadi berhamburan dimana-dimana, sini aku bantu" 
+    menu:
+        "Maaf aku gak sengaja, salahku kertasmu jadi berhamburan dimana-dimana, sini aku bantu":
+            jump bantu_1: 
+        "Maaf, apa kau tak apa?":
+            jump bantu_1
+    label bantu_1:
+    default goodies = ""
+    menu:
+        "Ambil Kalung yang terjatuh":
+            $ goodies = "kalung"
+        "Beritahu kalungnya terjatuh":
+            jump bantu_2
+    label bantu_2:
+        d "Ini kalungnya jatuh"
+        e "Oh iya, makasih ya udah ngingetin"
+        jump bantu_3
+
+label bantu_3:
     u "Iya, maaf itu salahku juga jalan tidak lihat-lihat, terima kasih ya sudah bantu."
+    menu:
     d "Iya sama-sama, kalau begitu aku duluan, ya"
 
     hide erika with dissolve

@@ -81,9 +81,9 @@ label chapter_3_2:
     d "Loh kok tiba-tiba banget saya"
     e "Hehe"
     d "Hmm coba kupikirkan sebentar"
-    e "Oh aku ada. Revina, dimanat koordinat polar dari titik kartesius dari (-√3, 1)"
+    e "Oh aku ada. Revina, dimana koordinat polar dari titik kartesius dari (-√3, 1)"
     show revina base
-    r "Hooh, itu gampang"
+    r "Iya, itu gampang"
     r "Kita punya sebuah titik dengan koordinat Kartesius: (-√3, 1)."
     r "Tugas kita sekarang adalah mencari bentuk koordinat polarnya."
 
