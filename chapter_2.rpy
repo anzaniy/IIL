@@ -21,7 +21,7 @@ label chapter_2:
     p "Seperti yang kita tahu, dalam pengambilan GAB itu sendiri"
     p "Dalam pembahasan topik garis, terdapat koordinat kartesius dan polar"
     p "Dika, kamu tahu gak, koordinat polar itu apa?"
-    menu:
+    menu:   
         "Koordinat polar itu sistem posisi titik yang ditentukan pakai jarak dari pusat (radius) dan sudut terhadap garis awal":
             jump benar_3
         "Koordinat polar itu sistem yang cuma pakai sumbu x dan y tanpa sudut":
