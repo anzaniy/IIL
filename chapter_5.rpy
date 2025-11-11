@@ -200,8 +200,41 @@ label chapter_5_3:
     r "Satu tim dari hongkong"
     r "Gamau tahu kalo ketahuan salah Dika"
     d "Yaudah ayok buruan masuk"
+    e "Tunggu sebentar"
+    r "Kenapa lagi, Er?"
+    e "Pintunya, kekunci"
+    r "Astaga, kenapa gak kepikiran"
+    r "Terus gimana kita masuknya?"
+    e "Setahuku kuncinya biasanya ditinggalin di meja belakang"
+    r "Atau kita bisa masuk lewat jendela":
+    jump pilihan_pintu
+    label pilihan_pintu:
+        default punya_kunci = false
+        e "Jadi, Dika, menurutmu bagaimana?"
+        menu:
+            "Buka pintunya":
+                if punya_kunci:
+                    "Kamu membuka pintunya":
+                        jump masuk_kelas
+                else:
+                    "Pintunya tak bisa dibuka":
+                        jump pilihan_pintu            
+            "Coba masuk lewat jendela":
+                "Jendelanya terkunci juga":
+                    jump pilihan_pintu           
+            "Dobrak pintunya":
+                "Pintunya terbuka, namun suara yang keras memancing satpam masuk"
+                "Hei kalian! apa yang kalian lakukan!"
+                r "Dika, dasar bodoh!!":
+                    jump pilihan_pintu
+            "Cari kuncinya":
+                $ punya_kunci = true
+                "Kau menemukan kunci!":
+                    jump pilihan_pintu
+
     hide erika
     hide revina 
+label masuk_kelas:
     e "Terakhir kuingat, aku meninggalkan bukuku di  meja, dan catatan kertas di papan ruang kelas"
     "Sesi Minigames"
     "Cukup klik barang Erika yang ketinggalan ketika objek ditemukan"

@@ -66,6 +66,7 @@ define p = Character('Pak Adib', color="#607004")
 define r = Character('Revina', color="#c4158f")
 define both_1 = Character('Dika, Erika, dan Revina', color="#ffffff")
 define revieri = Character('Erika, dan Revina', color="#ffffff")
+define dikarevi = Character('Andika, dan Revina', color="#ffffff")
 
 image hubungan satu  = im.Scale("images/Materi/relasi_1.png", 1100, 500)
 
