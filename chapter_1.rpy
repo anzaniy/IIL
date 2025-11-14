@@ -60,6 +60,7 @@ label chapter_1_1:
     menu:
         "Ambil Kalung yang terjatuh":
             $ goodies = "kalung"
+            jump bantu_3
         "Beritahu kalungnya terjatuh":
             jump bantu_2
     label bantu_2:
@@ -68,7 +69,7 @@ label chapter_1_1:
         jump bantu_3
 
 label bantu_3:
-    u "Iya, maaf itu salahku juga jalan tidak lihat-lihat, terima kasih ya sudah bantu."
+    u "Maaf itu salahku juga jalan tidak lihat-lihat, terima kasih ya sudah bantu."
     menu:
     d "Iya sama-sama, kalau begitu aku duluan, ya"
 

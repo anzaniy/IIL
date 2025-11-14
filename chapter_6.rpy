@@ -55,7 +55,7 @@ label chapter_6:
     e "Mungkin lebih hebat Kak Revi yang tahu persis soal didalem hehe"
     r "Gak tahu lagi, aku nyerah, jujur hari ini capek banget"
     e "Ah, tanpa sadar kita sudah sampe ke kosanku"
-    e "Kalau gitu, Dika, Revina, aku pamit duluan ya, maaf vanget udah ngerepotin kalian berdua"   
+    e "Kalau gitu, Dika, Revina, aku pamit duluan ya, maaf banget udah ngerepotin kalian berdua"   
     e "Untuk seterusnya jangan kapok ya"
     e "Semoga kita bisa jalan terus bersama sampai lulus"
     e "Terima kasih teman-teman"

@@ -6,13 +6,25 @@ label chapter_4:
     show erika base
     e "Dika, kamu pulang kearah mana?"
     d "Kosanku ada di jalan Aiko, depan sana"
-    d "Emangnya kenapa ?"
+    menu:
+        "Emangnya kenapa ?":
+            jump erieri
+        "Kalau gitu, aku duluan ya, hati-hati di jalan":
+            jump chapter_5
+label erieri:
     e "Kebetulan aku juga lewat sana"
     e "Untung saja kamu searah denganku"
-    d "Emang kamu gabisa pulang malem-malem kah"
+    menu:
+        "Emang kamu gabisa pulang malem-malem kah ?":
+            jump tanya_erika
+        "Emangnya kenapa ?":
+            jump tanya_erika
+label tanya_erika:
     e "Bisa sih, tapi pulang sendiri itu yang bikin susah, kamu kan tahu juga aku perempuan"
+    #scene jalan-jalan
     e "Jujur, aku suka banget geometri"
     e "Bahkan semua hal itu kalo dikaitin sama matematika itu menurutku asik banget"
+    #bingung
     e "Kayak misal contoh kamu tahu gak, rumus jarak dalam menghitung geometri dalam garis itu gimana"
     menu:
         "......":
@@ -113,7 +125,14 @@ label chapter_4_1:
                 jump jalan_4
     
     label jalan_4:
+        menu:
+            "Berikan kalung Erika" if goodies == "kalung":
+                jump kalung
+            "Erika....":
+                jump pulang
+        
         #CG Erika lihat pemandangan
+        label kalung:
         "Erika menepi di pagar taman sambil menatap pemandangan kota dari atas bukit"
         e "Lagipula, gak perlu banyak alasan juga udah cukup kok buat bisa nikmatin pemandangan ini"
         e "Meskipun hidup ini pahit"
@@ -123,15 +142,17 @@ label chapter_4_1:
         e "Kalau kita sendiri gak punya dada untuk dilapangkan"
         e "Apa aku benar, Dika?"
         d "......."
+        jump pulang
         #ganti normal
+    label pulang:
+        show erika base
         e "Anyway, yuk kita pulang"
         e "Udah mau tengah malem"
     
-    label pulang:
-        e "Oh, gitu.."
-        e "Yaudah, hati-hati ya"
-            jump chapter_5
-            
+        # e "Oh, gitu.."
+        # e "Yaudah, hati-hati ya"
+
+    hide erika   
     show erika happy
     e "makasih ya udh nemenin. sampai jumpa besok, Dika"
     menu:

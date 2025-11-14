@@ -20,6 +20,10 @@ image bg park_1 = im.Scale("images/Background/park_1.jpg", 2400, 1200)
 
 image illu lia = im.Scale("images/Illustration/illu_1.png", 1950, 1100)
 
+#CG Event
+image cg erika_view = "erika_view.png"
+image cg revina_flowers = "revina_flowers.png"
+
 #Revina
 image revina base = im.Scale("images/Character/revina_base.png", 1100, 1100)
 image revina happy = im.Scale("images/Character/revina_happy.png", 1100, 1100)

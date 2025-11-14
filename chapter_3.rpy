@@ -73,7 +73,12 @@ label chapter_3_2:
     r "Ah aku tahu"
     show revina happy
     r "Tukang hitung, hahaha"
-    d "Emang kamu sendiri gak bisa ngitung, sampe nyuruh diriku buat ngitung"
+    menu:
+        "Emang kamu sendiri gak bisa ngitung, sampe nyuruh diriku buat ngitung":
+            jump tukang_hitung
+        "Gak ada julukan yang lebih keren apa? emang situ bisa ngitung?":
+            jump tukang_hitung
+label tukang_hitung:
     r "Bisa dong, justru GAB ini paling mudah"
     show erika base
     e "Kalo gitu gimana kita tes langsung saja"
