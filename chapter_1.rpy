@@ -52,7 +52,7 @@ label chapter_1_1:
     "Kertasnya kulihat berhamburan kemana-mana"
     menu:
         "Maaf aku gak sengaja, salahku kertasmu jadi berhamburan dimana-dimana, sini aku bantu":
-            jump bantu_1: 
+            jump bantu_1
         "Maaf, apa kau tak apa?":
             jump bantu_1
     label bantu_1:
@@ -69,8 +69,12 @@ label chapter_1_1:
         jump bantu_3
 
 label bantu_3:
+<<<<<<< Updated upstream
     u "Maaf itu salahku juga jalan tidak lihat-lihat, terima kasih ya sudah bantu."
     menu:
+=======
+    u "Iya, maaf itu salahku juga jalan tidak lihat-lihat, terima kasih ya sudah bantu."
+>>>>>>> Stashed changes
     d "Iya sama-sama, kalau begitu aku duluan, ya"
 
     hide erika with dissolve
