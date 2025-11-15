@@ -69,12 +69,10 @@ label chapter_1_1:
         jump bantu_3
 
 label bantu_3:
-<<<<<<< Updated upstream
     u "Maaf itu salahku juga jalan tidak lihat-lihat, terima kasih ya sudah bantu."
     menu:
-=======
     u "Iya, maaf itu salahku juga jalan tidak lihat-lihat, terima kasih ya sudah bantu."
->>>>>>> Stashed changes
+    # u "Iya, maaf itu salahku juga jalan tidak lihat-lihat, terima kasih ya sudah bantu."
     d "Iya sama-sama, kalau begitu aku duluan, ya"
 
     hide erika with dissolve

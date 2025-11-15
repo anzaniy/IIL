@@ -124,7 +124,6 @@ label chapter_4_1:
             "Iyadeh aku percaya":
                 jump jalan_4
     
-<<<<<<< Updated upstream
     label jalan_4:
         menu:
             "Berikan kalung Erika" if goodies == "kalung":
@@ -154,7 +153,7 @@ label chapter_4_1:
         # e "Yaudah, hati-hati ya"
 
     hide erika   
-=======
+
 label jalan_4:
     #CG Erika lihat pemandangan
     "Erika menepi di pagar taman sambil menatap pemandangan kota dari atas bukit"
@@ -169,8 +168,7 @@ label jalan_4:
     #ganti normal
     e "Anyway, yuk kita pulang"
     e "Udah mau tengah malem"
-            
->>>>>>> Stashed changes
+
     show erika happy
     e "makasih ya udh nemenin. sampai jumpa besok, Dika"
     menu:
