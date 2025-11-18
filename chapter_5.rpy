@@ -17,9 +17,15 @@ label chapter_5:
 label chapter_5_1:
     stop music
     r "Halo Dika, ini aku, Revina, harusnya kamu sudah save contact aku sih kemarin, tapi gak papa lah"
-    d "Iya, aku save, ada apa kak?"
+    menu:
+        "Iya, aku save, ada apa kak?":
+            jump revi_telpon
+    label revi_telpon:
     r "Bisa tolong temenin aku gak ke perpusnas?"
-    d "Bisa sampai jam 1 aku mungkin ada kelas"
+    menu:
+        "Bisa sampai jam 1 aku mungkin ada kelas":
+            jump revi_telpon_2
+    label revi_telpon_2:
     r "Okeh, kalau gitu aku tunggu ya sekarang"
     d "Hah"
     d "Tunggu, kak, seriusan lagi seka-"
@@ -30,7 +36,10 @@ label chapter_5_1:
     "30 Menit kemudian"
     show revina envy
     r "Lama banget!"
-    d "Ini aja udah paling cepet ya aku berangkat"
+    menu:
+        "Ini aja udah paling cepet ya aku berangkat":
+            jump ketemuan
+    label ketemuan:
     d "Jadi, ada alasan apa kak kita kesini"
     show revina happy
     r "Temenin aku lah, kan kita satu topik, Erika lagi ada kelas, jadi aku ajak kamu dulu"
@@ -45,27 +54,27 @@ label chapter_5_1:
     d "Jadi apa topik kita pagi ini?"
     r "Tentu saja"
     show revina happy
-    r "Gradien"
+    r "{color=#00f}Gradien{/color}"
     show revina base
     r "Kamu pernah jalan di tanjakan atau turunan waktu naik sepeda?"
     r "Semakin miring jalannya, semakin kerasa berat atau cepatnya, kan?"
 
     r "Nah, itu mirip dengan apa yang kita sebut gradien dalam matematika."
-    r "Gradien adalah ukuran seberapa miring sebuah garis terhadap sumbu-x."
+    r "Gradien adalah {color=#00f}ukuran seberapa miring sebuah garis terhadap sumbu-x{/color}."
 
     r "Secara sederhana, kalau kita punya dua titik, misalnya A di (x₁, y₁) dan B di (x₂, y₂)..."
     image gradien satu  = im.Scale("images/Materi/gradien_1.png", 1100, 500)
     r "Gradien garis yang menghubungkan keduanya dihitung dengan rumus:"
     show revina base at left
     show gradien satu at truecenter
-    r "m = (y₂ - y₁) / (x₂ - x₁)"
+    r "{color=#00f}m = (y₂ - y₁) / (x₂ - x₁){/color}"
 
     r "Artinya, kita lihat seberapa besar perubahan naik atau turunnya, dibandingkan dengan seberapa jauh ke kanan atau kirinya."
 
     r "Sekarang bayangin ada tiga titik: A, B, dan C, berdiri di lapangan."
-    r "Kalau mereka berada di satu garis lurus, berarti arah dari A ke B sama dengan arah dari B ke C."
+    r "Kalau mereka berada di {color=#00f}satu garis lurus{/color}, berarti arah dari A ke B sama dengan arah dari B ke C."
 
-    r "Dengan kata lain, gradien AB harus sama dengan gradien BC."
+    r "Dengan kata lain, gradien AB {color=#00f}harus sama{/color} dengan gradien BC."
 
     r "Jadi, kamu bisa cek kesegarisannya dengan rumus sederhana:"
     r "Apakah (y₂ - y₁)/(x₂ - x₁) = (y₃ - y₂)/(x₃ - x₂)?"
@@ -143,7 +152,7 @@ label chapter_5_2:
     r "Pernah lihat jalan lurus yang membelah persawahan atau jalur rel kereta api?"
     r "Jalur seperti itu bisa digambarkan dengan sebuah persamaan garis dalam geometri analitik."
 
-    r "Bentuk umum dari garis itu adalah: Ax + By + C = 0"
+    r "Bentuk umum dari garis itu adalah: {color=#00f}Ax + By + C = 0{/color}"
     r "Di mana A, B, dan C adalah bilangan konstan."
 
     r "Kalau B tidak sama dengan nol, persamaan ini bisa diubah jadi:"

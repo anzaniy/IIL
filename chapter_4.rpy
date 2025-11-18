@@ -47,14 +47,14 @@ label chapter_4_1:
 
     e "Tapi bukan cuma soal jarak."
     e "Bayangkan kamu berjalan dari A ke B, dan kamu lihat arah langkahmu membentuk sudut θ terhadap arah timur."
-    e "Sudut ini kita sebut sudut inklinasi — arah perjalananmu."
+    e "Sudut ini kita sebut {color=#00f}sudut inklinasi{/color} — arah perjalananmu."
 
     e "Kalau kamu pecah perjalananmu jadi arah kanan-kiri dan atas-bawah..."
     e "Bagian ke kanan adalah r cos θ, yang sama dengan x₂ - x₁."
     e "Dan bagian ke atas adalah r sin θ, yaitu y₂ - y₁."
 
     e "Nah, kayak kamu naik tangga — kamu tahu tinggi dan panjang langkahmu, tapi ingin tahu berapa panjang miringnya."
-    e "Maka kamu pakai rumus Pythagoras."
+    e "Maka kamu pakai {color=#00f}rumus Pythagoras{/color}."
 
     e "r² = (x₂ - x₁)² + (y₂ - y₁)²"
 

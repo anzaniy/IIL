@@ -1,11 +1,26 @@
 #Intro + penjelasan bareng Doni, cabang opsional
 label chapter_1:
     stop music
-    d "H-Halo..?"
+    menu:
+        "H-Halo..?":
+            jump telpon_1
+        "Ini siapa?":
+            jump telpon_1
+    label telpon_1:
     u "Halo, Dika, udah siap berangkat belum?"
     u "Kamu gak lupa kan kalau pagi ini kamu ada kelas?"
-    d "Enggak kok, gak lupa, cuman sedikit begadang aja semalam"
+    menu:
+        "Enggak kok, gak lupa, cuman sedikit begadang aja semalam":
+            jump telpon_2
+        "Sebentar ini siapa?":
+            jump telpon_2_1
+    label telpon_2:
     u "Yaudah,buruan, katanya kamu ada kelas pagi"
+    jump telpon_3
+    label telpon_2_1:
+    u "Cuci muka dulu gih kamu buruan"
+    jump telpon_3
+    label telpon_3:
     d "Iya, iya, ini lagi siap-siap"
 
     play music "Blithe.ogg"
@@ -32,12 +47,12 @@ label chapter_1:
 
             label salah_1:
                 u "Tuh kan bener, kamu masih asal-asalan"
-                u "Geometri itu cabang matematika yang ngulik bentuk, ukuran, dan posisi benda di ruang"
+                u "Geometri itu {color=#00F}cabang matematika yang ngulik bentuk, ukuran, dan posisi benda di ruang{/color}"
                 jump chapter_1_1
 
 label chapter_1_1:
     u "Terus, gimana dengan proposal yang kamu ajuin baru-baru ini?"
-    d "Owh itu, itu proposal yang aku ajuin ke pak Adib, katanya sih dia mau ngabarin setelah kelas dia pagi ini, doain ya"
+    d "Owh itu, itu proposal yang aku ajuin ke {color=#00f}pak Adib{/color}, katanya sih dia mau ngabarin setelah kelas dia pagi ini, doain ya"
     u "Okee, semangat!"
     d "Astaga, 5 menit lagi kelas mau dimulai, kalau gitu aku tutup dulu ya telponnya, dadah"
     u "Eh tunggu Di-"
@@ -48,7 +63,7 @@ label chapter_1_1:
     "*Takkkk*"
     
     u "Aduhh"
-    "Sesaat setelah menutup telefon dengan tergesa, aku menabrak seorang perempuan asing"
+    "Sesaat setelah menutup telepon dengan tergesa, aku menabrak seorang perempuan asing"
     "Kertasnya kulihat berhamburan kemana-mana"
     menu:
         "Maaf aku gak sengaja, salahku kertasmu jadi berhamburan dimana-dimana, sini aku bantu":
@@ -110,7 +125,7 @@ label bantu_3:
             label salah_2:
                 show doni sus
                 r "Hah? Gak salah tuh?"
-                r "Bukannya geometri analitik bidang itu cabang matematika yang ngegabungin aljabar sama geometri pakai sistem koordinat (x, y)"
+                r "Bukannya geometri analitik bidang itu {color=#00f}cabang matematika yang ngegabungin aljabar sama geometri pakai sistem koordinat (x, y){/color}"
                 show doni happy
                 r "Haduh Dika, masa topik skripsi sendiri gak tahu, haha"
                 jump chapter_1_2
@@ -131,17 +146,17 @@ label chapter_1_2:
     d "Jadi gini, bayangkan sebuah bidang datar yang luas dan hening..."
     d "Di tengah bidang itu, terbentang dua garis, satu mendatar, satu lagi tegak lurus padanya."
     d "Yang mendatar disebut garis X'OX, dan yang tegak disebut Y'OY."
-    d "Keduanya bersilangan tepat di satu titik pusat, yang disebut O, titik asal segalanya."
+    d "Keduanya bersilangan tepat di satu {color=#00f}titik pusat{/color}, yang disebut O, titik asal segalanya."
 
     d "Kini, bayangkan sebuah titik sembarang di bidang itu. Namanya P."
-    d "Dari titik P, ditarik dua garis lurus, satu menuju garis X'X, satu lagi menuju garis Y'Y, dan keduanya tegak lurus."
+    d "Dari titik P, ditarik dua garis lurus, satu menuju garis X'X, satu lagi menuju garis Y'Y, dan keduanya {color=#00f}tegak lurus{/color}."
     d "Garis itu menyentuh titik-titik tertentu pada M di garis X'X dan N di garis Y'Y."
 
-    d "Jarak dari titik O ke titik M disebut x. Inilah yang disebut absis."
-    d "Sedangkan jarak dari titik O ke titik N disebut y. Inilah yang dinamakan ordinat."
+    d "Jarak dari titik O ke titik M disebut x. Inilah yang disebut {color=#00f}absis{/color}."
+    d "Sedangkan jarak dari titik O ke titik N disebut y. Inilah yang dinamakan {color=#00f}ordinat{/color}."
 
     d "Ketika kita tahu nilai x dan y, kita tahu di mana P berada."
-    d "Dan saat itulah titik P dikenal sebagai koordinat Kartesius, yaitu (x, y)."
+    d "Dan saat itulah titik P dikenal sebagai {color=#00f}koordinat Kartesius{/color}, yaitu (x, y)."
 
     d "Sederhana... namun dari sinilah semua bentuk dan arah dimulai."
     d "Sampai sini apa kamu paham, Don?"

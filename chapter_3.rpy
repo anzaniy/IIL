@@ -7,9 +7,9 @@ scene bg campus with dissolve
 
 show revina happy with dissolve
 r "Sebelumnya, Terima kasih ya udah nyempetin waktu buat diskusi disini"
-r "ngomong-ngomong sebelum kita diskusi lebih lanjut, kenalin namaku Revina, panggil aja Revi, salam kenal ya"
+r "ngomong-ngomong sebelum kita diskusi lebih lanjut, kenalin namaku {color=#00f}Revina{/color}, panggil aja Revi, salam kenal ya"
 show erika base
-e "Ohiya, kenalin, aku Erika, bisa dipanggil Eri"
+e "Ohiya, kenalin, aku {color=#00f}Erika{/color}, bisa dipanggil Eri"
 e "ngomong-ngomong untuk tadi pagi makasih ya, anu..."
 menu:
     "Namaku Andika Adyatama, panggil aja Dika, salam kenal":
@@ -45,7 +45,7 @@ label chapter_3_1:
     r "Masa begitu aja kurang tahu, sini aku jelaskan"
     show revina base at left
     r "Jadi dalam penjelasan koordinat polar oleh pak Adib"
-    r "Dalam geometri garis lurus, koordinat polar itu memiliki hubungan dengan koordinat kartesius"
+    r "Dalam geometri garis lurus, {color=#00f}koordinat polar itu memiliki hubungan dengan koordinat kartesius{/color}"
     show hubungan satu at truecenter
     r "Misalkan titik P ada di bidang datar."
     r "Titik itu bisa kita lihat sebagai (x, y) berdasarkan sumbu X'OX dan Y'OY..."
@@ -83,9 +83,15 @@ label tukang_hitung:
     show erika base
     e "Kalo gitu gimana kita tes langsung saja"
     e "Dika coba kasih pertanyaan"
-    d "Loh kok tiba-tiba banget saya"
+    menu:
+        "Loh kok tiba-tiba banget saya":
+            jump tanya_1
+    label tanya_1:
     e "Hehe"
-    d "Hmm coba kupikirkan sebentar"
+    menu:
+        "Hmm coba kupikirkan sebentar":
+            jump tanya_2
+    label tanya_2:
     e "Oh aku ada. Revina, dimana koordinat polar dari titik kartesius dari (-√3, 1)"
     show revina base
     r "Iya, itu gampang"
@@ -115,6 +121,8 @@ label tukang_hitung:
     r "Koordinat polar dari titik (-√3, 1) adalah: (2, 5π/6)"
     r "Simple kan"
     r "Sekarang gantian, aku yang tanya"
+    jump tanya_polar
+    label tanya_polar:
     r "Coba cari koordinat polar dari (√3,√3)"
     menu:
         "(√6, π/4)":
@@ -132,7 +140,8 @@ label tukang_hitung:
             label salah_3_1:
                 show revina envy
                 r "Kamu nyimak gak sih penjelasan aku?"
-                jump chapter_3_3
+                r "Ulangi lagi, pakai rumus yang sama"
+                jump tanya_polar
 
 label chapter_3_3:
     show revina base

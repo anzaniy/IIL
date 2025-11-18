@@ -41,12 +41,15 @@ label chapter_6:
     scene bg night city dock with dissolve
     show revina envy at left
     r "Dari banyaknya tempat, demi apapun, kenapa pas lari kalian kepikiran itu sih"
-    r "Random banget"
+    d "Random banget"
     show erika happy at right
     e "Setidaknya kita berhasil kabur hehe"
     r "Intinya cukup aku gamau lagi denger perkataan matematis lagi malem ini"
     r "Dika kamu juga diem"
-    d "Aku aja belum ngomong apa-apa"
+    menu:
+        "Aku aja belum ngomong apa-apa":
+            jump diem
+    label diem:
     r "Siapa tahu kan kamu tiba-tiba nyuruh nyari persamaan garis yang memiliki gradien 3/4 dan yang lewatin titik 2 dan 1"
     e "hasilnya 3x - 4y - 2 = 0 by the way"
     r "Eriii!"
