@@ -153,8 +153,31 @@ label chapter_4_1:
         # e "Yaudah, hati-hati ya"
 
     hide erika   
+
+label jalan_4:
+    #CG Erika lihat pemandangan
+    "Erika menepi di pagar taman sambil menatap pemandangan kota dari atas bukit"
+    e "Lagipula, gak perlu banyak alasan juga udah cukup kok buat bisa nikmatin pemandangan ini"
+    e "Meskipun hidup ini pahit"
+    e "Kita mau gamau harus ngejalanin ini dengan lapang dada"
+    e "Itu yang dikatakan oleh banyak orang"
+    e "Tapi, gimana mau lapang dada"
+    e "Kalau kita sendiri gak punya dada untuk dilapangkan"
+    e "Apa aku benar, Dika?"
+    d "......."
+    #ganti normal
+    e "Anyway, yuk kita pulang"
+    e "Udah mau tengah malem"
+
     show erika happy
     e "makasih ya udh nemenin. sampai jumpa besok, Dika"
     menu:
         "Sampai jumpa Erika":
+            jump chapter_5
+
+    label pulang:
+        e "Oh, gitu.."
+        e "Yaudah, hati-hati ya"
+    menu:
+        "Iya, selamat malam, Erika":
             jump chapter_5
