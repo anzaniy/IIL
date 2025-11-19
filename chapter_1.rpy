@@ -86,7 +86,9 @@ label chapter_1_1:
 label bantu_3:
     u "Maaf itu salahku juga jalan tidak lihat-lihat, terima kasih ya sudah bantu."
     menu:
-    u "Iya, maaf itu salahku juga jalan tidak lihat-lihat, terima kasih ya sudah bantu."
+        "Iya, maaf itu salahku juga jalan tidak lihat-lihat, terima kasih ya sudah bantu.":
+            jump maaf
+    label maaf:
     # u "Iya, maaf itu salahku juga jalan tidak lihat-lihat, terima kasih ya sudah bantu."
     d "Iya sama-sama, kalau begitu aku duluan, ya"
 
