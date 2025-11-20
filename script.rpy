@@ -1,10 +1,10 @@
 ﻿# Deklarasikan gambar di bawah line ini, menggunakan pernyataan image.
 # cnth. image eileen happy = "eileen_happy.png"
 image bg blck = im.Scale("images/Background/bg_1.jpg", 2400, 1200)
-image bg bedroom dika = im.Scale("images/Background/dikas_bedroom.jpg", 2400, 1200)
+image bg bedroom dika = im.Scale("images/Background/dika_kamar.png", 2400, 1200)
 image bg campus = im.Scale("images/Background/street.jpg", 2400, 1200)
-image bg campus_interrior = im.Scale("images/Background/classroom.jpg", 2400, 1200)
-image bg lecturer room = im.Scale("images/Background/room_1.jpg", 2400, 1200)
+image bg campus_interrior = im.Scale("images/Background/kelas.png", 2400, 1200)
+image bg lecturer room = im.Scale("images/Background/ruang_dosen.png", 2400, 1200)
 image bg night city = im.Scale("images/Background/night.jpg", 2400, 1200)
 image bg night city dock= im.Scale("images/Background/night_city_1.jpg", 2400, 1200)
 image bg library = im.Scale("images/Background/library.jpg", 2400, 1200)
@@ -22,7 +22,8 @@ image illu lia = im.Scale("images/Illustration/illu_1.png", 1950, 1100)
 
 #CG Event
 image cg erika_view = "erika_view.png"
-image cg revina_flowers = "revina_flowers.png"
+image cg revina_flowers = im.Scale("images/CG/revina_flowers.png", 1950, 1100)
+image cg erika_sad = im.Scale("images/CG/erika_sad.png", 1950, 1100)
 
 #Revina
 image revina base = im.Scale("images/Character/revina_base.png", 1100, 1100)

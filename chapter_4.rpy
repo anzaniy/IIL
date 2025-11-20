@@ -133,6 +133,9 @@ label chapter_4_1:
         
         #CG Erika lihat pemandangan
         label kalung:
+        hide erika
+        scene cg erika_sad with dissolve
+        play music "remembrance.mp3" fadeout 2.0 fadein 2.0
         "Erika menepi di pagar taman sambil menatap pemandangan kota dari atas bukit"
         e "Lagipula, gak perlu banyak alasan juga udah cukup kok buat bisa nikmatin pemandangan ini"
         e "Meskipun hidup ini pahit"
@@ -152,7 +155,7 @@ label chapter_4_1:
         # e "Oh, gitu.."
         # e "Yaudah, hati-hati ya"
 
-    hide erika   
+    # hide erika   
 
 # label jalan_4:
 #     #CG Erika lihat pemandangan
@@ -169,6 +172,7 @@ label chapter_4_1:
 #     e "Anyway, yuk kita pulang"
 #     e "Udah mau tengah malem"
 
+    scene bg night city
     show erika happy
     e "makasih ya udh nemenin. sampai jumpa besok, Dika"
     menu:
