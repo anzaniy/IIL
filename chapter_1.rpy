@@ -63,6 +63,8 @@ label chapter_1_1:
     "*Takkkk*"
     
     u "Aduhh"
+    hide erika
+    show erika sad
     "Sesaat setelah menutup telepon dengan tergesa, aku menabrak seorang perempuan asing"
     "Kertasnya kulihat berhamburan kemana-mana"
     menu:
@@ -80,6 +82,8 @@ label chapter_1_1:
             jump bantu_2
     label bantu_2:
         d "Ini kalungnya jatuh"
+        hide erika
+        show erika base
         e "Oh iya, makasih ya udah ngingetin"
         jump bantu_3
 
@@ -90,7 +94,7 @@ label bantu_3:
             jump maaf
     label maaf:
     # u "Iya, maaf itu salahku juga jalan tidak lihat-lihat, terima kasih ya sudah bantu."
-    d "Iya sama-sama, kalau begitu aku duluan, ya"
+    e "Iya sama-sama, kalau begitu aku duluan, ya"
 
     hide erika with dissolve
     scene bg campus_interrior with dissolve
@@ -141,11 +145,13 @@ label bantu_3:
 
 label chapter_1_2:
     show doni sus
+    # hide doni
     image kartesius satu = im.Scale("images/Materi/karte.png", 1100, 500)
     v "Tapi jujur gua gak terlalu paham sih tentang itu"
     d "Serius gak paham? garis lurus? kartesius"
     v "Kartesius? apa itu kartesius"
-    show doni sus at left
+    # hide kartesius with dissolve
+    hide doni
     show kartesius satu at truecenter
     d "Jadi gini, bayangkan sebuah bidang datar yang luas dan hening..."
     d "Di tengah bidang itu, terbentang dua garis, satu mendatar, satu lagi tegak lurus padanya."

@@ -37,7 +37,7 @@ image erika happy = im.Scale("images//Character/erika_happy.png", 1100, 1100)
 image erika envy = im.Scale("images//Character/erika_envy.png", 1100, 1100)
 image erika sad = im.Scale("images//Character/erika_sad.png", 1100, 1100)
 
-# #Erika Versi Awal
+# #Erika Versi Akhir
 # image erika base = im.Scale("images//Character/Erika/erika_base.png", 1400, 1400)
 # image erika happy = im.Scale("images//Character/Erika/erika_happy.png", 1100, 1100)
 # image erika envy = im.Scale("images//Character/Erika/erika_envy.png", 1100, 1100)

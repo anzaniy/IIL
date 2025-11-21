@@ -13,6 +13,7 @@ label chapter_4:
             jump chapter_5
 label erieri:
     e "Kebetulan aku juga lewat sana"
+    show erika happy
     e "Untung saja kamu searah denganku"
     menu:
         "Emang kamu gabisa pulang malem-malem kah ?":
@@ -20,11 +21,13 @@ label erieri:
         "Emangnya kenapa ?":
             jump tanya_erika
 label tanya_erika:
+    show erika base
     e "Bisa sih, tapi pulang sendiri itu yang bikin susah, kamu kan tahu juga aku perempuan"
     #scene jalan-jalan
     e "Jujur, aku suka banget geometri"
     e "Bahkan semua hal itu kalo dikaitin sama matematika itu menurutku asik banget"
     #bingung
+    show erika happy
     e "Kayak misal contoh kamu tahu gak, rumus jarak dalam menghitung geometri dalam garis itu gimana"
     menu:
         "......":
@@ -36,7 +39,8 @@ label chapter_4_1:
     e "Rumus matematika itu ya kalo diinget apalagi rumus yang panjang, itu belibet banget"
     e "Tapi kamu tahu gak sih klo rumus belibet itu bisa dipermudah mengingatnya kalau kita misalkan"
     e "Seperti contoh..."
-    show erika base at left
+    # show erika base at left
+    hide erika
     image jarak satu  = im.Scale("images/Materi/jarak_1.png", 1100, 500)
     show jarak satu at truecenter
     e "Bayangkan A dan B itu dua orang, mungkin kamu dan temanmu."
@@ -65,8 +69,9 @@ label chapter_4_1:
     e "Hidup juga gitu, kan?"
     e "Kadang kita gak tahu seberapa jauh kita dari tujuan, tapi kalau kita tahu posisi kita sekarang dan tahu arah, kita bisa hitung sendiri jaraknya."
 
-    show erika happy at left
+    show erika happy
     e "Dan itulah gunanya koordinat."
+    show erika base
     e "Jadi kalau misalnya ditanya carilah jarak antara titik (-2,1) dan (4,9)"
     e "Gampang kan tinggal dimasukin aja jadi =√36+64"
     e "Dapetlah 10"
@@ -76,6 +81,7 @@ label chapter_4_1:
     e "Aduh, maaf ya aku kebanyakan ngoceh dijalan"
     e "Pasti gedek juga dengerin aku ngomongin garis setelah kita pusing dengerin materi garis yang lain"
     e "....."
+    show erika base
     e "Anyway...abis ini kamu mau kemana ?"
     menu:
         "Aku sudah lelah hari ini, mau pulang dulu":
@@ -95,7 +101,9 @@ label chapter_4_1:
     
     label jalan_2:
         e "Oalah"
+        show erika happy
         e "Dulu aku juga sering jalan-jalan kesini setiap malam"
+        show erika base
         e "Tapi sekarang udah mulai jarang si"
         menu:
             "Kenapa kok mulai jarang?":
@@ -105,6 +113,7 @@ label chapter_4_1:
         
         label ngambek_1:
             #Muka ngambek
+            show erika envy
             e "Kamu kok gitu amat, gak pedulian banget"
             d "Eh, maaf-maaf"
             e "Yaudah deh kalo kamu gitu, aku pulang aja"
@@ -115,8 +124,10 @@ label chapter_4_1:
         e "Dan ya, aku selalu kabur kesini dulu"
         e "Entah itu untuk jernihin pikiran"
         "aku menatap Erika dengan muka prihatin"
+        show erika happy
         e "Gausah ngebayangin segitunya juga lah"
         e "Gak seburuk yang kamu pikirin kok"
+        show erika base
         e "apalagi anak kecil, kan masalah kecil aja suka dibesar-besarin"
         menu:
             "Beneran bukan masalah besar?":
@@ -133,6 +144,18 @@ label chapter_4_1:
         
         #CG Erika lihat pemandangan
         label kalung:
+        e "Tunggu, inikan...?"
+        e "Kamu nemu dimana?"
+        show erika happy
+        e "Aku dari kemariin nyariin gak ketemu-temu"
+        show erika base
+        e "Anyway, Dika, makasih ya udh nemuin"
+        e "Kamu tahu gak sih seberapa berharganya kalung ini bagiku"
+        e "Bagiku, segala kebahagiaanku berasal dari sini"
+        e "Tak perlu banyak alasan untuk menikmati hidup"
+        e "Selama ada kalung ini, sudah cukup buat mengisi alasanku untuk tetap kuat berada disini"
+        e "Tapi, tidak semuanya kok butuh alasan"
+        "Dari atas gunung, tempat kami berdiri, tertiup angin sangat kencang menghembus kearah kami"
         hide erika
         scene cg erika_sad with dissolve
         play music "remembrance.mp3" fadeout 2.0 fadein 2.0
@@ -171,17 +194,19 @@ label chapter_4_1:
 #     #ganti normal
 #     e "Anyway, yuk kita pulang"
 #     e "Udah mau tengah malem"
-
-    scene bg night city
+    # hide cg erika_sad
     show erika happy
+    scene bg night city
     e "makasih ya udh nemenin. sampai jumpa besok, Dika"
     menu:
         "Sampai jumpa Erika":
             jump chapter_5
 
-    label pulang:
-        e "Oh, gitu.."
-        e "Yaudah, hati-hati ya"
-    menu:
-        "Iya, selamat malam, Erika":
-            jump chapter_5
+label pulang:
+    e "Oh, gitu.."
+    e "Yaudah, hati-hati ya"
+scene bg night city
+show erika sad
+menu:
+    "Iya, selamat malam, Erika":
+        jump chapter_5

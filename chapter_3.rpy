@@ -8,6 +8,7 @@ scene bg campus with dissolve
 show revina happy with dissolve
 r "Sebelumnya, Terima kasih ya udah nyempetin waktu buat diskusi disini"
 r "ngomong-ngomong sebelum kita diskusi lebih lanjut, kenalin namaku {color=#00f}Revina{/color}, panggil aja Revi, salam kenal ya"
+hide revina
 show erika base
 e "Ohiya, kenalin, aku {color=#00f}Erika{/color}, bisa dipanggil Eri"
 e "ngomong-ngomong untuk tadi pagi makasih ya, anu..."
@@ -18,6 +19,7 @@ menu:
         jump lebay
 
         label lebay:
+            hide erika
             show revina base at right
             show erika base at left
             revieri "....."
@@ -29,23 +31,25 @@ menu:
             jump chapter_3_1
 
 label chapter_3_1:
+    hide erika
     show revina happy at right
     show erika happy at left
     revieri "Salam kenal juga dika"
     hide revina
     hide erika 
-    show erika base at right
+    show erika happy at right
     e "Mohon kerja samanya ya teman-teman"
-    show revina base
+    show revina happy at left
     r "Mohon kerjasamanya juga, semoga kita bisa menemukan titik P kita ya"
+    show erika sad at right
     e "Lagi-lagi itu, aku masih kurang paham dibagian itu"
-    show revina sad
     e "Rasanya kepalaku ingin meledak"
-    show revina happy
-    r "Masa begitu aja kurang tahu, sini aku jelaskan"
     show revina base at left
+    r "Masa begitu aja kurang tahu, sini aku jelaskan"
     r "Jadi dalam penjelasan koordinat polar oleh pak Adib"
     r "Dalam geometri garis lurus, {color=#00f}koordinat polar itu memiliki hubungan dengan koordinat kartesius{/color}"
+    hide erika
+    hide revina
     show hubungan satu at truecenter
     r "Misalkan titik P ada di bidang datar."
     r "Titik itu bisa kita lihat sebagai (x, y) berdasarkan sumbu X'OX dan Y'OY..."
@@ -68,7 +72,7 @@ label chapter_3_1:
             jump chapter_3_2
 
 label chapter_3_2:
-    show revina base at left
+    show revina base
     r "Eh, kamu ya, hmm apa ya, kamu ini sebagai...."
     r "Ah aku tahu"
     show revina happy
@@ -80,8 +84,10 @@ label chapter_3_2:
             jump tukang_hitung
 label tukang_hitung:
     r "Bisa dong, justru GAB ini paling mudah"
+    hide revina
     show erika base
     e "Kalo gitu gimana kita tes langsung saja"
+    show erika happy
     e "Dika coba kasih pertanyaan"
     menu:
         "Loh kok tiba-tiba banget saya":
@@ -92,7 +98,9 @@ label tukang_hitung:
         "Hmm coba kupikirkan sebentar":
             jump tanya_2
     label tanya_2:
+    show erika base
     e "Oh aku ada. Revina, dimana koordinat polar dari titik kartesius dari (-√3, 1)"
+    hide erika
     show revina base
     r "Iya, itu gampang"
     r "Kita punya sebuah titik dengan koordinat Kartesius: (-√3, 1)."
@@ -109,7 +117,7 @@ label tukang_hitung:
 
     r "Sekarang kita hitung nilai tan θ:"
     r "tan θ = y / x = 1 / (-√3) = -1/√3"
-
+    show revina happy
     r "Tanpa ragu, kita tahu bahwa sudut θ dengan nilai tangen -1/√3 di kuadran kedua adalah:"
     r "θ = 5π/6"
 
@@ -119,6 +127,7 @@ label tukang_hitung:
 
     r "Kesimpulannya?"
     r "Koordinat polar dari titik (-√3, 1) adalah: (2, 5π/6)"
+    show revina base
     r "Simple kan"
     r "Sekarang gantian, aku yang tanya"
     jump tanya_polar
@@ -146,10 +155,12 @@ label tukang_hitung:
 label chapter_3_3:
     show revina base
     r "Gak kerasa banget, sudah mau malem aja kita diskusi disini"
+    hide revina
     show erika base
     e "*Melihat jam tangan"
     show erika sad
     e "Wah iya, gak kerasa banget"
+    hide erika
     show revina base
     r "Kalau gitu kita sudahi dulu ya pertemuan ini"
     r "Inget nanti kita diskusi lagi"

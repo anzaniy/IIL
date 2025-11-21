@@ -41,7 +41,7 @@ label chapter_2:
 
 label chapter_2_1:
     image polar satu  = im.Scale("images/Materi/koor_polar.png", 1100, 500)
-    show adib base at left
+    hide adib
     show polar satu at truecenter
     p "Coba kalian bayangkan, ada sebuah garis dari titik O ke titik A. Itu garis awal."
     p "Lalu, titik P itu ya seperti kalian sekarang, masih belum jelas posisinya."

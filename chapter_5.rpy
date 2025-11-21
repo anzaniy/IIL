@@ -249,6 +249,8 @@ label masuk_kelas:
     "Sesi Minigames"
     "Cukup klik barang Erika yang ketinggalan ketika objek ditemukan"
     "Jika sudah tekan tombol done di pojok kanan atas"
+    hide erika
+    hide revina
     jump hidden_object_example
 
 label chapter_5_4:
