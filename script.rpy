@@ -2,13 +2,13 @@
 # cnth. image eileen happy = "eileen_happy.png"
 image bg blck = im.Scale("images/Background/bg_1.jpg", 2400, 1200)
 image bg bedroom dika = im.Scale("images/Background/dika_kamar.png", 2400, 1200)
-image bg campus = im.Scale("images/Background/street.jpg", 2400, 1200)
+image bg campus = im.Scale("images/Background/street.png", 2400, 1200)
 image bg campus_interrior = im.Scale("images/Background/kelas.png", 2400, 1200)
 image bg lecturer room = im.Scale("images/Background/ruang_dosen.png", 2400, 1200)
 image bg night city = im.Scale("images/Background/night.jpg", 2400, 1200)
 image bg night city dock= im.Scale("images/Background/night_city_1.jpg", 2400, 1200)
-image bg library = im.Scale("images/Background/library.jpg", 2400, 1200)
-image bg cafe = im.Scale("images/Background/cafe_1.png", 2400, 1200)
+image bg library = im.Scale("images/Background/perpus.png", 2400, 1200)
+image bg cafe = im.Scale("images/Background/kafe.png", 2400, 1200)
 image bg lounge = im.Scale("images/Background/lounge.jpg", 2400, 1200)
 image bg dark = im.Scale("images/darkness.webp", 2400, 1200)
 
@@ -16,7 +16,7 @@ image bg campus_1 = im.Scale("images/Background/campus_1.jpg", 2400, 1200)
 image bg lib_1 = im.Scale("images/Background/lib_1.jpg", 2400, 1200)
 image bg cafe_1 = im.Scale("images/Background/lib_2.jpg", 2400, 1200)
 image bg hall_1 = im.Scale("images/Background/hall_1.jpg", 2400, 1200)
-image bg park_1 = im.Scale("images/Background/park_1.jpg", 2400, 1200)
+image bg park_1 = im.Scale("images/Background/taman.png", 2400, 1200)
 
 image illu lia = im.Scale("images/Illustration/illu_1.png", 1950, 1100)
 
