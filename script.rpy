@@ -7,7 +7,7 @@ image bg campus_interrior = im.Scale("images/Background/kelas.png", 2400, 1200)
 image bg lecturer room = im.Scale("images/Background/ruang_dosen.png", 2400, 1200)
 image bg night city = im.Scale("images/Background/night.jpg", 2400, 1200)
 image bg night city dock= im.Scale("images/Background/night_city_1.jpg", 2400, 1200)
-image bg library = im.Scale("images/Background/perpus.png", 2400, 1200)
+image bg library = im.Scale("images/Background/library.jpg", 2400, 1200)
 image bg cafe = im.Scale("images/Background/kafe.png", 2400, 1200)
 image bg lounge = im.Scale("images/Background/lounge.jpg", 2400, 1200)
 image bg dark = im.Scale("images/darkness.webp", 2400, 1200)
@@ -75,7 +75,33 @@ define both_1 = Character('Dika, Erika, dan Revina', color="#123c8a")
 define revieri = Character('Erika, dan Revina', color="#6d1092")
 define dikarevi = Character('Andika, dan Revina', color="#ffffff")
 
+#Ilustrasi singkat karakter
+#Erika digendong
+image erika gendong = im.Scale("images/scene/erika_gendong.png", 1100, 1100)
+#Revina digendong
+image revina gendong = im.Scale("images/scene/revina_gendong_1.png", 1100, 1100)
+
 image hubungan satu  = im.Scale("images/Materi/relasi_1.png", 1100, 500)
+
+# Splash Screen
+image splash = "images/splash.png"
+label splashscreen:
+    scene black 
+    with Pause(1)
+
+    show splash with dissolve
+    with Pause(2)
+
+    scene black with dissolve
+    with Pause(1)
+
+    # show text "Raanzani Present" with dissolve
+    # with Pause(2)
+
+    # hide text with dissolve
+    # with Pause(1)
+
+    return
 
 # Game dimulai disini.
 label start:

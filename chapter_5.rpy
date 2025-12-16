@@ -254,6 +254,8 @@ label masuk_kelas:
     jump hidden_object_example
 
 label chapter_5_4:
+    # "Sebelum kita keluar, ayo mainkan permainan kecil untuk mengisi waktu!"
+    # call tic_tac_toe_minigame
     show erika base
     e "Akhirnya keluar juga"
     d "Jangan santai dulu, masih ada satpam disini"
@@ -264,8 +266,57 @@ label chapter_5_4:
     show revina base
     r "Gawat kita dikejer"
     r "Buruan lari cepetan"
-    jump chapter_6
+    e "kamu ngapain diem aja, ayo buruan!!"
+    r "iyaa ini aku udah lari secepat mungkin"
+    hide revina
+    scene bg night city dock
+    menu:
+        "Tenang, satpamnya gendut kok, aku yakin kita pasti bisa":
+            show erika envy
+            e "Dika, gak boleh body shaming!"
+            show revina envy
+            r "Kenapa lari gini masih sempetnya body shaming sih"
+            d "Maaf, maaf"
+            jump chapter_6
 
+        "Aduh aku gak kuat lari, tolong":
+            show revina envy
+            r "Dika, kamukan cowok, kenapa malah kamu yang kecapean"
+            e "Huu, Dika cowok tapi lemah huuu"
+            d "berisikk"
+            jump chapter_6
+
+        "Kalian kenapa larinya lambat banget sih":
+            show revina envy
+            r "Wajar lah, kami kan cewek"
+            r "Aduhh, aku gak kuat, tolongin..."
+            d "Gak ada pilihan lain, sini..."
+            hide revina
+            show revina gendong at shake, center
+            r "T...tunggu, kamu ngapain?"
+            r "D...Dika, turunin tolong...."
+            r "Malu...."
+            d "Persetan malu"
+            d "Setidaknya lebih baik dari pada ketangkep basah"
+            e "Sempet-sempetnya ya kamu Dika"
+            r "Aaaaaaaaa........."
+            jump chapter_6
+        "Ayo, tunjukkan hasil pelajaran penjaskes 12 tahun kita":
+            show erika sad
+            e "Dika maaf banget, aku homeschooling"
+            r "Emang homeschooling gaada pelajaran penjas?"
+            e "Ada tapi teori saja"
+            d "Homeschooling macam apa itu"
+            e "Aaaa aku gak kuat, tolongin"
+            hide erika
+            show erika gendong at shake, center
+            d "Dasar manja, sini"
+            e "T...tunggu, Dika, maaf kamu ngapain"
+            e "Turunin, aku malu"
+            r "Sempet-sempetnya kamu ini, Dika"
+            d "Berisikk, fokus lari aja dulu"
+            hide erika
+            jump chapter_6
 
 
 

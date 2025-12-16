@@ -118,6 +118,7 @@ label bantu_3:
     d "Ah enggak kok, gua cuman mengajukan proposal saja ke Pak Adib"
     show doni base
     r "Secepat itu? skripsi tentang apa emang lu ngajuinnya?"
+    # r "Secepat itu? emangnya skripsi tentang apa yang kamu ajuin, Dika?"
     d "Anu, itu tentang Geometri Analitik Bidang, tapi mungkin ada perubahan terkait isi penelitiannya karena agak bingung mau fokus ke sub materi yang mana"
     r "Hah Geometri Analitik apa tuh"
     d "Serius lu udah gak tahu?"

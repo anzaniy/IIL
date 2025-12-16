@@ -1,7 +1,8 @@
 #chapter bareng sekaligus end dari first half(?)
 label chapter_6:
     "Chapter 6"
-    scene bg night city
+    hide erika
+    hide revina
     show revina base at left
     show erika base at right
     r "Cepet lari! Satpamnya udah di belokan!"
