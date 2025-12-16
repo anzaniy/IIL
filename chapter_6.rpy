@@ -39,11 +39,9 @@ label chapter_6:
     e "Tunggu, ada benarnya juga, ayok kita belok kiri!"
 
     "Beberapa saat kemudian"
-    scene bg night city dock with dissolve
-    show revina envy at left
+    scene cg scene_tepar with dissolve
     r "Dari banyaknya tempat, demi apapun, kenapa pas lari kalian kepikiran itu sih"
     d "Random banget"
-    show erika happy at right
     e "Setidaknya kita berhasil kabur hehe"
     r "Intinya cukup aku gamau lagi denger perkataan matematis lagi malem ini"
     r "Dika kamu juga diem"
@@ -64,13 +62,11 @@ label chapter_6:
     e "Semoga kita bisa jalan terus bersama sampai lulus"
     e "Terima kasih teman-teman"
     r "Sama-sama, Revi"
-    "Seketika kami melihat Erika berbalik masuk kedalam"
-    "Erika seketika berhenti didepan pintu tanpa masuk kedalam"
+    "Seketika Erika terlihat seperti meraba sakunya dengan cepat"
     r "Kenapa Erika, ada sesuatu ?"
     e "Enggak sih, cuman..."
     e "Kayaknya..."
     e "Kunci kosanku terjatuh"
     dikarevi "Astagaa....."
-    hide bg night city with dissolve
     #Tambah CG bertiga ketawa bareng tp susah sih
     "Chapter Selesai"

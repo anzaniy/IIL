@@ -24,6 +24,7 @@ image illu lia = im.Scale("images/Illustration/illu_1.png", 1950, 1100)
 image cg erika_view = "erika_view.png"
 image cg revina_flowers = im.Scale("images/CG/revina_flowers.png", 1950, 1100)
 image cg erika_sad = im.Scale("images/CG/erika_sad.png", 1950, 1100)
+image cg scene_tepar = im.Scale("images/scene/scene_tepar.png", 1950, 1100)
 
 #Revina
 image revina base = im.Scale("images/Character/revina_base.png", 1100, 1100)
